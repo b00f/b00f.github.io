@@ -28,7 +28,7 @@ twitter_username: mostafa.joo
 github_username:  b00f
 
 #/:categories/:title:output_ext
-permalink:  none
+permalink:  /:categories/:title
 google_analytics: UA-1946728-8
 
 # Build settings
