@@ -4,11 +4,11 @@ title:  "Rust’s Futures Explained"
 date:   2020-05-07 00:27:03 +0800
 categories: rust
 ---
-Imaging we are going to write an application for a call center to answer some emails and phone calls daily. For sake of simplicity we only answer 5 emails and phone calls daily. Let’s start.
+Imaging we are going to write an application for a call center to answer some emails and phone calls daily. For the sake of simplicity, we answer 5 emails and phone calls daily. Let’s start.
 
 <h3>Using threads</h3>
 
-To run our call center we can hire two persons to answer the phones and responding the email **parallelly**. In this case our call center application would be something like this:
+To run our call center we can hire two people to answer the phones and respond the email **in parallel**. In this case our call center application would look something like this:
 
 {% highlight rust %}
 use std::{thread, time::Duration};
@@ -58,19 +58,18 @@ ThreadId(3): Answering phone: 4
 ThreadId(3): Answering phone: 5
 ```
 
-Awesome! We have implemented our call center application. As you can see two jobs are done simultaneously. With hiring two persons our call center is running well.
+Awesome! We have implemented our call center application. As you can see, both jobs are performed simultaneously. With two people, our call center is running well.
 
-In this scenario, each person is similar to an **OS thread**. When you run the application two worker threads will run in background and start running their **jobs**. As you can see we have three threads in our application. *ThreadId(1)* is main thread, *ThreadId(2)* is for Responding emails and *ThreadId(3)* for answering phones.However using OS threads has some disadvantages:
+In this scenario, each person is similar to an **OS thread**. When you run the application, two worker threads will run in background and start running their **jobs**. We have three threads in our application: *ThreadId(1)* is main thread, *ThreadId(2)* is for Responding emails and *ThreadId(3)* for answering phones. However using OS threads has some disadvantages:
 
 - They are **expensive**: You need to hire two persons and pay them daily.
 - They are **Costly**: You need to allocate two desks, phone lines, … .
 
-
 <h3>Using Futures</h3>
 
-You might think about doing small **tasks** by yourself instead of hiring two persons. In this case you need to handle the task **concurrently** to not-block you. If you are answering an email, you can put your phone call on **wait**. After sending an email you can back to the pending phone call and answer that. As you can see you are an handling a **state machines**: each task has state of done or pending.
+You might think about doing small **tasks** by yourself instead of hiring two persons. In this case you need to handle the tasks **concurrently** to ensure everything is done. If you are answering an email, you can put your phone call on **wait**. After sending an email, you can go back to the pending phone call and answer that. Each task becomes a **state machine**, which lets you pause a task, and later take it up again.
 
-Let’s implement it with Rust’s Futures. Future in rust is a task which is going to be done in future. something similar with Promise in JavaScript, but it’s not! We discuss about it later. Here is our code with Future:
+Let’s implement it with Rust’s Futures. A Future in Rust is a task that is going to be done in future. It sounds similar to a Promise in JavaScript, but it’s not the same thing! We will get back to that later, so in the mean-time, here is our code with Future:
 
 {% highlight rust %}
 use std::{thread, time::Duration};
@@ -100,7 +99,8 @@ async fn main() {
 }
 {% endhighlight %}
 
-`async` keyword emphasizes that the function is an asynchronous function. The value returned by `async fn` is a Future. Futures are *lazy*: they do nothing until they are run. The most common way to run a Future is to `.await` it. `join!` is like `.await` but can wait for multiple futures concurrently. We changed sleep to `delay_for` which is an asynchronous analog to `std::thread::sleep`.
+The `async` keyword emphasizes that the function is an asynchronous function. The value returned by `async fn` is a Future. Futures are *lazy*: they do nothing until they are executed. The most common way to run a Future is to `.await` it. The `join!` macro is like `.await`, but can wait for multiple futures concurrently. We changed sleep to `delay_for`, which is the asynchronous analogue to `std::thread::sleep`.
+
 If you run this code you might see something like this:
 
 ```
@@ -117,24 +117,24 @@ ThreadId(1): Answering phone: 4
 ThreadId(1): Answering phone: 5
 ```
 
-Awesome! We have implemented our call center application in asynchronous mode. We only allocated one thread for our call center application. Now we are running our call center without hiring anyone. First we respond to an email, then later we yields or give up responding emails and response to a waited phone call. later we back to respond another email and so on.
+Awesome! We have implemented our call center application in asynchronous mode. We only allocated one thread for our call center application. Now we are running our call center without hiring anyone. First we respond to an email, then we yield or give up responding emails and respond to a waiting phone call. Later we go back and respond to another email and so on.
 
 <h3>Green threads</h3>
 
-In Rust tasks are asynchronous **green threads**. Green thread is not an OS thread. Green thread are controlled by **runtime** rather than OS:
+In Rust tasks are asynchronous **green threads**. A green thread is not an OS thread, rather a green thread is controlled by a **runtime** instead of the OS:
 
 > Green threads are threads that are scheduled by a virtual machine (VM) instead of natively by the underlying operating system.
 
 The definition from Wikipedia raises several points. First green threads are threads: they can be seen as lightweight processes executed concurrently and sharing the same address space. Second, they are provided by a user mode program, meaning that we do not need to hack the kernel in order to implement them!
 
-The definition mentions a virtual machine, this is not exactly accurate . I would rather say an execution environment or more simply, a runtime.
-Green thread can be executed into same OS thread or different OS thread, i.e. if you use `tokio::task::spawn_local` the code will be executed in the same OS thread, however by using `tokio::task::spawn` the code will be executed in different OS thread and this is why Futures need to implement Send trait to work with spawn function.
+The definition mentions a virtual machine, but this is not exactly accurate. I would rather say an execution environment, or more simply a runtime.
+Green threads can be executed on one OS thread or multiple different OS threads. If you use `tokio::task::spawn_local`, the code will be executed on the same OS thread, however by using `tokio::task::spawn` the code might be executed in different OS thread. Futures need to implement the Send trait to work with the `spawn` function.
 
-Calling and awaiting this function will cause the current task to yield to the Tokio runtime's scheduler, allowing other tasks to be scheduled. Eventually, the yielding task will be polled again, allowing it to execute.
+Calling and awaiting a function will cause the current task to yield to the Tokio runtime's scheduler, which allows other tasks to be scheduled. Eventually, the yielding task will be polled again, allowing it to continue executing.
 
 <h3>Rust’s Futures vs JavaScript’s Promises</h3>
 
-Futures in Rust are similar to Promises in JavaScripts. However there is a basic difference between them. In JavaScrip Promises are based on callback. It’s Push based model. In Rust, Futures are is Pull based. There is big advantage of using poll base model in Rust. In JavaScripts, promises automatically starts whenever you define them (JavaScript has built-in runtime), however in Rust Futures are lazy, they do not run until they are polled. you need to define a runtime and manually execute a task which can gives you more control on tasks.
+Futures in Rust are similar to Promises in JavaScript, but there is a basic difference between them. In JavaScrip Promises are based on callbacks. It is a push based model. In Rust, Futures are pull based. A poll based model fits much better with how Rust works than a pull based model would. In JavaScript, promises are automatically started when you define them (JavaScript has a built-in runtime), however Futures are lazy in Rust, which means that they do not run until they are polled. You need to define a runtime and manually execute a task which can give you more control over your tasks.
 
 <h4>References:</h4>
 - [Rust’s Journey to Async/Await](https://www.youtube.com/watch?v=lJ3NC-R3gSI)
