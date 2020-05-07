@@ -29,6 +29,7 @@ github_username:  b00f
 
 #/:categories/:title:output_ext
 permalink:  none
+google_analytics: UA-146878866-2
 
 # Build settings
 theme: minima
