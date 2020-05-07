@@ -1,6 +1,6 @@
 ---
 layout: page
-title: About me
+title: About
 permalink: /about/
 ---
-Nothing important!
+Hi. Nice to meet you. My name is Mostafa. I put some of my works here. If you like is, please share it: Sharing is caring.
