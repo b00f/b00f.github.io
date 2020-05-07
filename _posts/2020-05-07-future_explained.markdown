@@ -1,12 +1,12 @@
 ---
 layout: post
 title:  "Rust’s Futures Explained"
-date:   2020-05-07 00:27:03 +0800
+date:   2020-05-07 00:00:00 +0800
 categories: rust
 ---
 Imaging we are going to write an application for a call center to answer some emails and phone calls daily. For the sake of simplicity, we answer 5 emails and phone calls daily. Let’s start.
 
-<h3>Using threads</h3>
+### Using threads
 
 To run our call center we can hire two people to answer the phones and respond the email **in parallel**. In this case our call center application would look something like this:
 
@@ -65,7 +65,7 @@ In this scenario, each person is similar to an **OS thread**. When you run the a
 - They are **expensive**: You need to hire two persons and pay them daily.
 - They are **Costly**: You need to allocate two desks, phone lines, … .
 
-<h3>Using Futures</h3>
+### Using Futures
 
 You might think about doing small **tasks** by yourself instead of hiring two persons. In this case you need to handle the tasks **concurrently** to ensure everything is done. If you are answering an email, you can put your phone call on **wait**. After sending an email, you can go back to the pending phone call and answer that. Each task becomes a **state machine**, which lets you pause a task, and later take it up again.
 
@@ -119,7 +119,7 @@ ThreadId(1): Answering phone: 5
 
 Awesome! We have implemented our call center application in asynchronous mode. We only allocated one thread for our call center application. Now we are running our call center without hiring anyone. First we respond to an email, then we yield or give up responding emails and respond to a waiting phone call. Later we go back and respond to another email and so on.
 
-<h3>Green threads</h3>
+### Green threads
 
 In Rust tasks are asynchronous **green threads**. A green thread is not an OS thread, rather a green thread is controlled by a **runtime** instead of the OS:
 
@@ -132,11 +132,11 @@ Green threads can be executed on one OS thread or multiple different OS threads.
 
 Calling and awaiting a function will cause the current task to yield to the Tokio runtime's scheduler, which allows other tasks to be scheduled. Eventually, the yielding task will be polled again, allowing it to continue executing.
 
-<h3>Rust’s Futures vs JavaScript’s Promises</h3>
+### Rust’s Futures vs JavaScript’s Promises
 
 Futures in Rust are similar to Promises in JavaScript, but there is a basic difference between them. In JavaScrip Promises are based on callbacks. It is a push based model. In Rust, Futures are pull based. A poll based model fits much better with how Rust works than a pull based model would. In JavaScript, promises are automatically started when you define them (JavaScript has a built-in runtime), however Futures are lazy in Rust, which means that they do not run until they are polled. You need to define a runtime and manually execute a task which can give you more control over your tasks.
 
-<h4>References:</h4>
+#### References:
 - [Rust’s Journey to Async/Await](https://www.youtube.com/watch?v=lJ3NC-R3gSI)
 - [Rust book](https://doc.rust-lang.org/book/)
 - [Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/)
