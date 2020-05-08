@@ -140,6 +140,6 @@ Futures in Rust are similar to Promises in JavaScript, but there is a basic diff
 - [Rust’s Journey to Async/Await](https://www.youtube.com/watch?v=lJ3NC-R3gSI)
 - [Rust book](https://doc.rust-lang.org/book/)
 - [Asynchronous Programming in Rust](https://rust-lang.github.io/async-book/)
-- [Tokio documentation](https://tokio.rs/docs/overview/Green Threads)
+- [Tokio documentation](https://tokio.rs/docs/overview/)
 - [Green threads Explained](https://c9x.me/articles/gthreads/intro.html)
 - [Designing futures for Rust](https://aturon.github.io/blog/2016/09/07/futures-design/)
