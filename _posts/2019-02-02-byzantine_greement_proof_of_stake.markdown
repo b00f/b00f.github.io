@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Byzantine Agreement Proof of Stake"
-date:   2019-02-02 00:00:00 +0800
+date:   2019-02-02 00:00:00 +0000
 categories: blockchain
 ---
 
