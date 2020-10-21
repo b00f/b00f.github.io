@@ -78,14 +78,14 @@ use std::{thread, time::Duration};
 async fn responding_emails() {
     for i in 1..6 {
         println!("{:?}: Responding email: {}", thread::current().id(), i);
-        tokio::time::delay_for(Duration::from_millis(10)).await;
+        tokio::time::sleep(Duration::from_millis(10)).await;
     }
 }
 
 async fn answering_phones() {
     for i in 1..6 {
         println!("{:?}: Answering phone: {}", thread::current().id(), i);
-        tokio::time::delay_for(Duration::from_millis(20)).await;
+        tokio::time::sleep(Duration::from_millis(20)).await;
     }
 }
 
