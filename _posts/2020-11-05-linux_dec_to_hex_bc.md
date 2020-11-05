@@ -6,10 +6,10 @@ categories: linux, life-is-too-short
 ---
 
 
-* Linux is fun and life is too short!
-I am going to talk about some simple tweaks in linux that male life easier *
+*Linux is fun and life is too short!
+I am going to talk about some simple tweaks in linux that male life easier*
 
-** Converting Decimals to Hex **
+# Converting Decimals to Hex
 
 Concerting Hex to Binary is quite easy. You just need a paper and a pen.
 But sometimes you have a *sequence* of decimal numbers and you want to get their hex values. `bc` command makes you life easier.
