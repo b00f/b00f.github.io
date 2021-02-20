@@ -1,11 +1,11 @@
 ---
 layout: post
-title:  "Byzantine Agreement Proof of Stake"
-date:   2019-02-02 00:00:00 +0000
+title: "Byzantine Agreement Proof of Stake"
+date: 2019-02-02 00:00:00 +0000
 categories: blockchain
 ---
 
-*In this article, I try to discuss about the practical issues of Proof of Stake consensus model. I assume that you know the concepts of consensus engine in the blockchain and difference between the Proof of Work and Proof of Stake consensus models. In case you want to know more about blockchain fundamental parts read here: [Understanding Blockchain Fundamentals](https://medium.com/loom-network/understanding-blockchain-fundamentals-part-1-byzantine-fault-tolerance-245f46fe8419)*
+_In this article, I try to discuss about the practical issues of Proof of Stake consensus model. I assume that you know the concepts of consensus engine in the blockchain and difference between the Proof of Work and Proof of Stake consensus models. In case you want to know more about blockchain fundamental parts read here: [Understanding Blockchain Fundamentals](https://medium.com/loom-network/understanding-blockchain-fundamentals-part-1-byzantine-fault-tolerance-245f46fe8419)_
 
 ## A paradox
 
@@ -18,6 +18,7 @@ The block size can also be a big issue when the number of validators increase. V
 Here is the paradox: a blockchain will be more secure and decentralized if more validators participated on it, but all implementations of PoS has limitation for the size of the validator set. You need more validators but you can’t have it.
 
 ### Delegated Proof of Stake (dPoS)
+
 ![Delegated Proof of Stake](/public/images/delegated_proof_of_stake.jpg)
 
 In a nutshell, in Delegated Proof of Stake (dPoS), people vote for a group of ‘delegates’ and these delegates validate transactions and produce blocks.
@@ -27,6 +28,7 @@ But how can voters trust a delegate? If a delegate is acting badly, what will ha
 In the EOS blockchain, there is [constitution](https://github.com/EOSIO/eos/blob/5068823fbc8a8f7d29733309c0496438c339f7dc/constitution.md) for the people participating in the blockchain. This constitution is full of “shall” and “shall not”. In the long run, this blockchain will be ruled by a powerful organization and won’t be decentralized anymore.
 
 ### Scaling validator set
+
 ![Dynamic validator set](/public/images/dynamic_validator_set_proof_of_stake.jpg)
 
 A solution for this problem is creating a **dynamic set** of validators. Validators can be changed randomly. Anyone can easily become a validator by staking some tokens. In each round, every validator starts running a Verifiable Random Function (VRF) in order to self-choose themselves. The VRF is absolutely random and the result can be verified easily. Based on their stake and their chance, a validator can be on the set for the next run. Once a validator enters the set, the oldest validator in the set exits. So we can always guarantee that validators are in the set for a certain amount of time. In the set, validators have equal power and it helps to make a fully democratic set for the blockchain.
