@@ -1,41 +1,23 @@
 ---
 layout: post
-title: "Linux: How to make life easier - Part 1"
-date: 2021-21-02 00:00:00 +0000
+title: "How linux make our life easier - Part 2"
+date: 2021-02-20 00:00:00 +0000
 categories: linux
 ---
 
-_Linux is fun and life is too short!
-I am going to talk about some simple tweaks in linux that male life easier_
+_In these series I am going to talk about some simple tweaks in linux that makes life easier_
 
-## Converting Decimals to Hex
+## How to repeat
 
-Concerting Hex to Binary is quite easy. You just need a paper and a pen.
-But sometimes you have a _sequence_ of decimal numbers and you want to get their hex values. `bc` command makes you life easier.
+Imagine you are going to perform a stress test.
+You want to restart a service repeatably to make sure the whole system is fault tolerant.
+`watch` is you magic command here. You can use `watch` command to repeat a task.
 
-In this example I need to know what is the hax value for [170 187 204 221 238 255]:
+For example you can restart a docker service every 10 seconds:
 {% highlight bash %}
-$ echo "obase=16; 170;187;204;221;238;255" | bc
-AA
-BB
-CC
-DD
-EE
-FF
+wathc -n 10 docker restart node_1
 {% endhighlight %}
 
-You can play with `obase` and `ibase` settings. example:
-{% highlight bash %}
-$ echo "ibase=16; AA;BB;CC;DD;EE;FF" | bc
-170
-187
-204
-221
-238
-255
-{% endhighlight %}
+This is simple but makes your life easier. Trust me!
 
-You want more fun, try this command by yourself:
-{% highlight bash %}
-$ echo "ibase=10;obase=2; 170;187;204;221;238;255" | bc
-{% endhighlight %}
+You use [tmux](https://github.com/tmux/tmux/wiki) to restart a service in one pane and watch another service in another pane. Keep tmux open for a day, it's fun!

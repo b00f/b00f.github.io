@@ -6,7 +6,8 @@ categories: blockchain
 ---
 
 _Stamping a transaction_ simply means putting the previous block hash into the header of the transaction.
-A _stamped transaction_ unlike normal transactions has a lifetime (TTL) and it's only valid for a certain time. If `TTL = N`, the stamped transaction after `N` blocks will be invalid.
+A _stamped transaction_ unlike normal transactions has a lifetime (TTL) and it's only valid for a certain time.
+If $$TTL = N$$, the stamped transaction after $$N$$ blocks will be invalid.
 
 By stamping transactions we can decouple transactions from the block. There is no need to save the whole transaction inside a block and keeping the transaction hash is fair enough.
 

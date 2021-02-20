@@ -5,16 +5,15 @@ date: 2020-11-04 00:00:00 +0000
 categories: linux
 ---
 
-_In these series on I am going to talk about some simple tweaks in linux that made life easier_
+_In these series I am going to talk about some simple tweaks in linux that makes life easier_
 
-
-# How linux make our life easier - Part 1
 ## Converting Decimals to Hex
 
-Concerting Hex to Binary is quite easy. You just need a paper and a pen.
-But sometimes you have a _sequence_ of decimal numbers and you want to get their hex values. `bc` command makes you life easier.
+[Converting Hex to Binary](https://www.binaryhexconverter.com/hex-to-binary-converter) is quite easy. You just need a paper and a pen.
+But sometimes you have a _sequence_ of decimal numbers and you want to calculate their hex values.
+`bc` command is your magic tool. With one example I am going to show you how `bc` command works.
 
-In this example I need to know what is the hax value for [170 187 204 221 238 255]:
+In this example we are going to find out the hex values for: `[170 187 204 221 238 255]`:
 {% highlight bash %}
 $ echo "obase=16; 170;187;204;221;238;255" | bc
 AA
@@ -25,7 +24,7 @@ EE
 FF
 {% endhighlight %}
 
-You can play with `obase` and `ibase` settings. example:
+You can play with `obase` and `ibase` options. For instance you can convert hexadecimals to decimals like this:
 {% highlight bash %}
 $ echo "ibase=16; AA;BB;CC;DD;EE;FF" | bc
 170

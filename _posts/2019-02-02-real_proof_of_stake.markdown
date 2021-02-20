@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Byzantine Agreement Proof of Stake"
+title: "Real Proof of Stake"
 date: 2019-02-02 00:00:00 +0000
 categories: blockchain
 ---
@@ -29,6 +29,6 @@ In the EOS blockchain, there is [constitution](https://github.com/EOSIO/eos/blob
 
 ### Scaling validator set
 
-![Dynamic validator set](/public/images/dynamic_validator_set_proof_of_stake.jpg)
+![Dynamic validator set](/public/images/real_proof_of_stake.jpg)
 
 A solution for this problem is creating a **dynamic set** of validators. Validators can be changed randomly. Anyone can easily become a validator by staking some tokens. In each round, every validator starts running a Verifiable Random Function (VRF) in order to self-choose themselves. The VRF is absolutely random and the result can be verified easily. Based on their stake and their chance, a validator can be on the set for the next run. Once a validator enters the set, the oldest validator in the set exits. So we can always guarantee that validators are in the set for a certain amount of time. In the set, validators have equal power and it helps to make a fully democratic set for the blockchain.
