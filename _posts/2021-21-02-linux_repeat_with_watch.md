@@ -15,7 +15,7 @@ You want to restart a service repeatably to make sure the whole system is fault 
 
 For example you can restart a docker service every 10 seconds:
 {% highlight bash %}
-wathc -n 10 docker restart node_1
+watch -n 10 docker restart node_1
 {% endhighlight %}
 
 This is simple but makes your life easier. Trust me!
