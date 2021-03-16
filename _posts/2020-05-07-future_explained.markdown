@@ -11,37 +11,39 @@ Imaging we are going to write an application for a call center to answer some em
 
 To run our call center we can hire two people to answer the phones and respond the email **in parallel**. In this case our call center application would look something like this:
 
-{% highlight rust %}
+```rust
 use std::{thread, time::Duration};
 
 fn responding_emails() {
-for i in 1..6 {
-println!("{:?}: Responding email: {}", thread::current().id(), i);
-// sleep for 10 milisecons
-thread::sleep(Duration::from_millis(10));
-}
+  for i in 1..6 {
+    println!("{:?}: Responding email: {}", thread::current().id(), i);
+
+    // sleep for 10 milisecons
+    thread::sleep(Duration::from_millis(10));
+  }
 }
 
 fn answering_phones() {
-for i in 1..6 {
-println!("{:?}: Answering phone: {}", thread::current().id(), i);
-// sleep for 20 milisecons. People talks more!
-thread::sleep(Duration::from_millis(20));
-}
+  for i in 1..6 {
+    println!("{:?}: Answering phone: {}", thread::current().id(), i);
+
+    // sleep for 20 milisecons. People talks more!
+    thread::sleep(Duration::from_millis(20));
+  }
 }
 
 fn main() {
-println!("{:?}: Our call center is running...", thread::current().id());
+  println!("{:?}: Our call center is running...", thread::current().id());
 
-    let handle_1 = thread::spawn(|| { responding_emails(); });
-    let handle_2 = thread::spawn(|| { answering_phones(); });
+  let handle_1 = thread::spawn(|| { responding_emails(); });
+  let handle_2 = thread::spawn(|| { answering_phones(); });
 
-    // Waits for the associated threads to finish.
-    handle_1.join().unwrap();
-    handle_2.join().unwrap();
+  // Waits for the associated threads to finish.
+  handle_1.join().unwrap();
+  handle_2.join().unwrap();
 
 }
-{% endhighlight %}
+```
 
 If you run this code you might see something like this:
 
@@ -72,36 +74,37 @@ You might think about doing small **tasks** by yourself instead of hiring two pe
 
 Let’s implement it with Rust’s Futures. A Future in Rust is a task that is going to be done in future. It sounds similar to a Promise in JavaScript, but it’s not the same thing! We will get back to that later, so in the mean-time, here is our code with Future:
 
-{% highlight rust %}
+```rust
 use std::{thread, time::Duration};
 
 async fn responding_emails() {
-for i in 1..6 {
-println!("{:?}: Responding email: {}", thread::current().id(), i);
-tokio::time::sleep(Duration::from_millis(10)).await;
-}
+  for i in 1..6 {
+    println!("{:?}: Responding email: {}", thread::current().id(), i);
+
+    tokio::time::sleep(Duration::from_millis(10)).await;
+  }
 }
 
 async fn answering_phones() {
-for i in 1..6 {
-println!("{:?}: Answering phone: {}", thread::current().id(), i);
-tokio::time::sleep(Duration::from_millis(20)).await;
-}
+  for i in 1..6 {
+    println!("{:?}: Answering phone: {}", thread::current().id(), i);
+
+    tokio::time::sleep(Duration::from_millis(20)).await;
+  }
 }
 
 #[tokio::main]
 async fn main() {
-println!("{:?}: Our call center is running...", thread::current().id());
+  println!("{:?}: Our call center is running...", thread::current().id());
 
-    let future_1 = responding_emails();
-    let future_2 = answering_phones();
+  let future_1 = responding_emails();
+  let future_2 = answering_phones();
 
-    futures::join!(future_1, future_2);
-
+  futures::join!(future_1, future_2);
 }
-{% endhighlight %}
+```
 
-The `async` keyword emphasizes that the function is an asynchronous function. The value returned by `async fn` is a Future. Futures are _lazy_: they do nothing until they are executed. The most common way to run a Future is to `.await` it. The `join!` macro is like `.await`, but can wait for multiple futures concurrently. We changed sleep to `delay_for`, which is the asynchronous analogue to `std::thread::sleep`.
+The `async` keyword emphasizes that the function is an asynchronous function. The value returned by `async fn` is a Future. Futures are _lazy_: they do nothing until they are executed. The most common way to run a Future is to `.await` it. The `join!` macro is like `.await`, but can wait for multiple futures concurrently. We used `tokio::time::sleep`, which is the asynchronous analogue to `std::thread::sleep`.
 
 If you run this code you might see something like this:
 
