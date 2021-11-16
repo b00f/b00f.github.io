@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How linux make our life easier - Part 1"
+title: "Converting Decimals to Hex"
 date: 2020-11-04 00:00:00 +0000
 categories: linux
 ---

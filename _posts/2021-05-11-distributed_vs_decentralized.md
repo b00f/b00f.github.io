@@ -22,7 +22,7 @@ If you are going to build a trading platform or file-sharing system with a monol
 
 A distributed application is hard to develop, test, and deploy. It has many nodes, and each node is fully independent. All nodes work together by sending messages through the network. Netflix is a good example of a Distributed Application. It contains dozens of microservices that each [microservice](https://microservices.io/) has Single Responsibility.
 
-In my point of view, distributed software has two major categories: __Orchestrated Distributed system__ and __Decentralized system__.
+In my point of view, distributed software has two major categories: **Orchestrated Distributed system** and **Decentralized system**.
 
 ### Orchestrated Distributed system
 
@@ -38,7 +38,7 @@ In order to deploy and manage the Orchestrated Distributed system, you need an o
 <img style="float: right;" src="../assets/images/distributed_vs_decentralized-decentralized.png">
 _A colony of ants is divided into different castes: workers, queens, and males. Worker ants leave the nest in search of food. Whenever a worker ant finds food, he returns to the nest and on his path he informs other ants. Ant colony is a decentralized system. Ants are the nodes in the network and the network has no orchestrator_
 
-In a Decentralized system (or which I like to call: Non-Orchestrated Distributed system), there is no orchestration center. When a new node enters the network, it informs other nodes and other nodes try to help it join the network. Since there is no center for orchestrating the network, the network itself does the orchestration. [BitTorrent protocol](https://en.wikipedia.org/wiki/BitTorrent) or [Tor network](https://en.wikipedia.org/wiki/Tor_(network)) are good examples of a decentralized system.
+In a Decentralized system (or which I like to call: Non-Orchestrated Distributed system), there is no orchestration center. When a new node enters the network, it informs other nodes and other nodes try to help it join the network. Since there is no center for orchestrating the network, the network itself does the orchestration. [BitTorrent protocol](https://en.wikipedia.org/wiki/BitTorrent) or [Tor network](<https://en.wikipedia.org/wiki/Tor_(network)>) are good examples of a decentralized system.
 
 The lack of orchestrator and security mechanism comes with a cost: A decentralized system is vulnerable to attacks like [Sybil attack](https://en.wikipedia.org/wiki/Sybil_attack).
 
@@ -49,9 +49,7 @@ A decentralized system is vulnerable to Sybil attacks. Blockchain tries to solve
 
 Adding consensus comes with a cost. Blockchain can't be scalable. In decentralized system like Tor Network, adding more nodes, make the system more efficient and respondent, but in the blockchain this is not the case. Vitalik Buterin describes this as [Blockchain Trilemma](https://vitalik.ca/general/2021/04/07/sharding.html). The blockchain trilemma tells us that greater scalability is possible, but security, decentralization, or both will suffer as a consequence.
 
-
-
 ---
+
 [^1]: [Wikipedia](https://en.wikipedia.org/wiki/Monolithic_application)
 [^2]: [Wikipedia](https://en.wikipedia.org/wiki/Kubernetes)
-

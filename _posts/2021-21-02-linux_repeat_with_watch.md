@@ -1,11 +1,9 @@
 ---
 layout: post
-title: "How linux make our life easier - Part 2"
+title: "How to repeat"
 date: 2021-02-20 00:00:00 +0000
 categories: linux
 ---
-
-_In these series I am going to talk about some simple tweaks in linux that makes life easier_
 
 ## How to repeat
 
@@ -20,4 +18,5 @@ watch -n 10 docker restart node_1
 
 This is simple but makes your life easier. Trust me!
 
-You use [tmux](https://github.com/tmux/tmux/wiki) to restart a service in one pane and watch another service in another pane. Keep tmux open for a day, it's fun!
+You use [tmux](https://github.com/tmux/tmux/wiki) to restart a service in one pane and watch another service in another pane.
+Keep tmux open for a day, it's fun!
