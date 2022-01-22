@@ -82,7 +82,9 @@ Calling and awaiting a function will cause the current task to yield to the Toki
 
 ### Rust’s Futures vs JavaScript’s Promises
 
-Futures in Rust are similar to Promises in JavaScript, but there is a basic difference between them. In JavaScrip Promises are based on callbacks. It is a push based model. In Rust, Futures are poll based. A poll based model fits much better with how Rust works than a poll based model would. In JavaScript, promises are automatically started when you define them (JavaScript has a built-in runtime), however Futures in Rust are lazy, which means that they do not run until they are polled. You need to define a runtime and manually execute a task which can give you more control over your tasks. Executing a future in Rust doesn't need to allocate even a single byte in the heap memory which is why the Futures in Rust are so powerful than Promises in Javascript.
+Futures in Rust are similar to Promises in JavaScript, but there is a basic difference between them. In JavaScrip Promises are based on callbacks. It is a push based model. In Rust, Futures are poll based.
+
+In JavaScript, promises are automatically started when you define them (JavaScript has a built-in runtime), however Futures in Rust are lazy, which means that they do not run until they are polled. You need to define a runtime and manually execute a task which can give you more control over your tasks. Executing a future in Rust doesn't need to allocate even a single byte in the heap memory which is why the Futures in Rust are so powerful than Promises in Javascript.
 
 #### References:
 
