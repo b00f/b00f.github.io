@@ -33,10 +33,12 @@ google_analytics: UA-1946728-8
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-gist
+
 
 minima:
   skin: classic
-  
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -45,11 +45,11 @@ The lack of orchestrator and security mechanism comes with a cost: A decentraliz
 ## Blockchain
 
 <img style="float: right;" src="../assets/images/distributed_vs_decentralized-blockchain.png">
-A decentralized system is vulnerable to Sybil attacks. Blockchain tries to solve this issue by adding the consensus mechanism. To have a consensus about any changes, all the nodes in the network should have the same state. This is the major difference between blockchain and decentralized system. In blockchain, all the nodes in the network have an identical state, and to move the old state to the new state, all the nodes should reach a level of consensus about that change. Since most of the nodes are loyal to the system, attackers can’t do anything, mostly because they are in a minority group.
+A decentralized system is vulnerable to Sybil attacks. Blockchain tries to solve this issue by adding the consensus mechanism. To have a consensus about any changes, all the nodes in the network should have the same state ([replicated state machine](https://en.wikipedia.org/wiki/State_machine_replication)). This is the major difference between blockchain and decentralized system. In blockchain, all the nodes in the network have an identical state, and to move the old state to the new state, all the nodes should reach a level of consensus about that change. Since most of the nodes are loyal to the system, attackers can’t do anything, mostly because they are in a minority group.
 
 Adding consensus comes with a cost. Blockchain can't be scalable. In decentralized system like Tor Network, adding more nodes, make the system more efficient and respondent, but in the blockchain this is not the case. Vitalik Buterin describes this as [Blockchain Trilemma](https://vitalik.ca/general/2021/04/07/sharding.html). The blockchain trilemma tells us that greater scalability is possible, but security, decentralization, or both will suffer as a consequence.
 
 ---
 
-[^1]: [Wikipedia](https://en.wikipedia.org/wiki/Monolithic_application)
-[^2]: [Wikipedia](https://en.wikipedia.org/wiki/Kubernetes)
+[^1]: [Wikipedia: Monolithic Application](https://en.wikipedia.org/wiki/Monolithic_application)
+[^2]: [Wikipedia: Kubernetes](https://en.wikipedia.org/wiki/Kubernetes)

@@ -5,7 +5,6 @@ date: 2020-04-03 00:00:00 +0000
 categories: linux
 ---
 
-
 If you are obsessed with Gnome desktop, as I am, and you want a clean desktop with no icon
 you can use Gnome Trash extension for managing the trash items.
 
@@ -19,6 +18,5 @@ Also you can easily search items inside trash.
 - Sorting trash items by deleted time or file name
 - Activation behavior: Open, Restore or permanently delete the file
 - Hiding the button when trash is empty
-
 
 Have fun with your trash!
