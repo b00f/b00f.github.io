@@ -11,9 +11,7 @@ Imaging we are going to write an application for a call center to answer some em
 
 To run our call center we can hire two people to answer the phones and respond the email **in parallel**. In this case our call center application would look something like this:
 
-
 {% gist 23c7b4f6f6eae5c454d890d6289757b8 %}
-
 
 If you <a href="https://play.rust-lang.org/?gist=23c7b4f6f6eae5c454d890d6289757b8&edition=2018" target="_new">run this code</a> you might see something like this:
 
@@ -61,7 +59,6 @@ ThreadId(1): Responding email: 5
 ThreadId(1): Answering phone: 4
 ThreadId(1): Answering phone: 5
 ```
-
 
 The `async` keyword emphasizes that the function is an asynchronous function. The value returned by `async fn` is a Future. Futures are _lazy_: they do nothing until they are executed. The most common way to run a Future is to `.await` it. The `join!` macro is like `.await`, but can wait for multiple futures concurrently. We used `tokio::time::sleep`, which is the asynchronous analogue to `std::thread::sleep`.
 

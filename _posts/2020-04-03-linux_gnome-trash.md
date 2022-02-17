@@ -5,12 +5,12 @@ date: 2020-04-03 00:00:00 +0000
 categories: linux
 ---
 
-If you are obsessed with Gnome desktop, as I am, and you want a clean desktop with no icon
+If you are obsessed with Gnome desktop, as I am, and you want a clean desktop without any icon
 you can use Gnome Trash extension for managing the trash items.
 
 With [this extension](https://extensions.gnome.org/extension/4410/gnome-trash/)
 you can manage your trash items and open or empty your trash folder.
-Also you can easily search items inside trash.
+Also you can easily search items inside the trash.
 
 ### Features
 
