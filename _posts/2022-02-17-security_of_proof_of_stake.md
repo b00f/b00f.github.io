@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Security of Proof of Stake blockchain"
+title: "About security of Proof of Stake"
 date: 2022-02-17 00:00:00 +0000
 categories: blockchain
 ---
