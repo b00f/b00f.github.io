@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Nothing at stake"
+title: "Security of Proof of Stake blockchain"
 date: 2022-02-17 00:00:00 +0000
 categories: blockchain
 ---
 
-## Nothing at Stack
+## About Nothing at Stack
 
 I am not sure where the term "Nothing at stake" is minted, but I can guess it came from the Bitcoin community.
 In Proof of Work blockchains, fork is inevitable, but only for a short period of time. Finally the longer chain will win.
@@ -27,7 +27,7 @@ The second assumption for Proof of stake blockchain is vital, otherwise the cons
 
 When you don’t understand the question, you will give the wrong answer to it. Slashing mechanism is a wrong answer to an invalid question and just brings complexity to the codebase. In which fork are you going to slash the stacks? And which fork are you going to choose as a main fork?
 
-## Long Range Attack
+## About Long Range Attack
 
 If nothing-at-stake is not important, Long Range attack is very [serious attack](https://bitcointalk.org/index.php?topic=1382241.0) for Proof of Stake blockchains. Imagine in a real proof of Stake blockchain with random validators you can obtain (or even buy) the private keys from the early validators. If you have enough keys, you can reorganize a new fork from the early blocks and attack the blockchain. Consider that there is no work here, and just stake. Therefore reorganizing the blockchain is easy.
 
