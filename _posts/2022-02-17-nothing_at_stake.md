@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Nothing at stake"
-date: 2022-17-02 00:00:00 +0000
+date: 2022-02-17 00:00:00 +0000
 categories: blockchain
 ---
 
