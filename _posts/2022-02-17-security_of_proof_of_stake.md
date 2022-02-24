@@ -17,7 +17,7 @@ Let’s dig into it a little deeper. Here are some assumptions:
 1. In each height the proposer is deterministically known
 2. More than ⅔ of the stake should be honest and sign the proposed block
 
-To create a fork at the current height, a (bad) proposer has to publish two different proposals to the network. The second assumption states that 2/3 of the validators are honest and loyal to the network and that two proposals aren’t signed at once. As a result, only one proposal has the chance to be signed and accepted by others, while the second proposal will be rejected. Therefore, in Proof of Stake blockchains, the finality of it is an immediate action by the network. Beautiful, isn’t it?
+To create a fork at the current height, a (bad) proposer has to publish two different proposals to the network. The second assumption states that ⅔ of the validators are honest and loyal to the network and that two proposals aren’t signed at once. As a result, only one proposal has the chance to be signed and accepted by others, while the second proposal will be rejected. Therefore, in Proof of Stake blockchains, the finality of it is an immediate action by the network. Beautiful, isn’t it?
 
 In a nutshell, in Proof of Stake, if a fork happens at the current height, it is the result of a bad implementation or else the second assumption is not fulfilled. The second assumption for Proof of Stake blockchains is vital, if it is not fulfilled, the consensus mechanism will suffer.
 
@@ -25,7 +25,7 @@ In a nutshell, in Proof of Stake, if a fork happens at the current height, it is
 
 When you don’t understand the question, you will give the wrong answer to it. The slashing mechanism is a wrong answer to a wrong question and brings much added complexity to the codebase. Slashing mechanisms also raise many questions, such as: “In which fork are you going to slash the stakes?” or, “Which fork are you going to choose as a main fork?”
 
-## About long range Attack
+## About Long Range Attack
 
 If “Nothing at Stake” is unimportant, then Long Range Attacks are a very [serious attack](https://bitcointalk.org/index.php?topic=1382241.0) for Proof of Stake blockchains. Imagine that in a real Proof of Stake blockchain, with random validators, you can obtain (or even buy) the private keys from the early validators. If you have enough keys, you can reorganize a new fork from the early blocks and attack the blockchain. If you consider that there is no work here, just stake, then reorganizing the blockchain is easy.
 
