@@ -21,7 +21,7 @@ To create a fork at the current height, a (bad) proposer has to publish two diff
 
 In a nutshell, in Proof of Stake, if a fork happens at the current height, it is the result of a bad implementation or else the second assumption is not fulfilled. The second assumption for Proof of Stake blockchains is vital, if it is not fulfilled, the consensus mechanism will suffer.
 
-### About slashing
+### Slashing is wrong answer
 
 When you don’t understand the question, you will give the wrong answer to it. The slashing mechanism is a wrong answer to a wrong question and brings much added complexity to the codebase. Slashing mechanisms also raise many questions, such as: “In which fork are you going to slash the stakes?” or, “Which fork are you going to choose as a main fork?”
 
@@ -45,5 +45,6 @@ One way to mitigate these attacks is to somehow bind the transaction into the ma
 
 Some blockchains suggest to create checkpoints to prevent Long Range attack. This is a naive solution and doesn't solve the problem. First adversary can create the checkpoints also, and more importantly, how often a checkpoint should be created? In the other word, how long can be a Long Range attack!?
 
+References:
 
 [^1]: [Algorand Blockchain Features Specification, Version 1.0](https://github.com/algorandfoundation/specs/blob/master/overview/Algorand_v1_spec-2.pdf)
