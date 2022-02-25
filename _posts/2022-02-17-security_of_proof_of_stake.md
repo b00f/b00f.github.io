@@ -45,6 +45,6 @@ One way to mitigate these attacks is to somehow bind the transaction into the ma
 
 Some blockchains suggest to create checkpoints to prevent Long Range attack. This is a naive solution and doesn't solve the problem. First adversary can create the checkpoints also, and more importantly, how often a checkpoint should be created? In the other word, how long can be a Long Range attack!?
 
-References:
+---
 
 [^1]: [Algorand Blockchain Features Specification, Version 1.0](https://github.com/algorandfoundation/specs/blob/master/overview/Algorand_v1_spec-2.pdf)

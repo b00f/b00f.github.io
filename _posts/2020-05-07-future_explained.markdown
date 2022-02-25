@@ -83,7 +83,7 @@ Futures in Rust are similar to Promises in JavaScript, but there is a basic diff
 
 In JavaScript, promises are automatically started when you define them (JavaScript has a built-in runtime), however Futures in Rust are lazy, which means that they do not run until they are polled. You need to define a runtime and manually execute a task which can give you more control over your tasks. Executing a future in Rust doesn't need to allocate even a single byte in the heap memory which is why the Futures in Rust are so powerful than Promises in Javascript.
 
-#### References:
+---
 
 - [Rust’s Journey to Async/Await](https://www.youtube.com/watch?v=lJ3NC-R3gSI)
 - [Rust book](https://doc.rust-lang.org/book/)

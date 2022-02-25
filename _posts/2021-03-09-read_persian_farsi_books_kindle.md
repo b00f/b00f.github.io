@@ -13,7 +13,7 @@ If you have a Kindle and want to read a Persian, Arabic or Hebrew eBooks, you ha
 
 It looks like the standards like mobi and ePub have issues with Right-To-Left (RTL) direction[^1]. One solution is converting them to AZW3 format[^2]. Install [Calibre](https://calibre-ebook.com/) and convert your book to AZW3 format. Make sure you have deleted other formats like mobi. Then upload the book to your Kindle. Hopefully this works for you.
 
-References:
+---
 
 [^1]: [Problems with RTL texts](http://www.mobileread.mobi/forums/showthread.php?t=118874)
 [^2]: [Conversion of hebrew text from epub to mobi is backwards](https://bugs.launchpad.net/calibre/+bug/1073414)
