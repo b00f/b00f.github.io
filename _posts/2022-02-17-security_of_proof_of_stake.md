@@ -29,4 +29,21 @@ When you don’t understand the question, you will give the wrong answer to it. 
 
 If “Nothing at Stake” is unimportant, then Long Range Attacks are a very [serious attack](https://bitcointalk.org/index.php?topic=1382241.0) for Proof of Stake blockchains. Imagine that in a real Proof of Stake blockchain, with random validators, you can obtain (or even buy) the private keys from the early validators. If you have enough keys, you can reorganize a new fork from the early blocks and attack the blockchain. If you consider that there is no work here, just stake, then reorganizing the blockchain is easy.
 
-Unfortunately, there is no way to make a Proof of Stake blockchain immune against Long Range Attacks. The only way to mitigate these attacks is to somehow bind the transaction into the main chain or fork. In this way, you could put something from the main chain, such as the previous block hash, into the transaction. This mechanism would be like stamping a transaction and would help to secure the blockchain against Long Range Attacks. Stamped transactions would be valid only on the main chain and therefore you wouldn’t be able to use them in any other long fork.
+### Algorand solution
+
+In the [Algorand](https://www.algorand.com/) protocol users change their ephemeral participation keys used for every round. That is, after a user signs her message for round `r`, she deletes the ephemeral key used for signing, and fresh ephemeral keys will be used in future rounds. So even if in the future an adversary corrupts all committee members for a round `r`, as the users holding the supermajority of stakes were honest in round `r` and erased their ephemeral
+keys, no two distinct valid blocks can be produced for the same round. [^1]
+
+Algorand's solution for preventing Long Range attack has some side effects: It added complexity to the codebase and since all participant should provide cryptographic proof for ephemeral keys per round, it increased the network bandwidth.
+
+
+### Zarb solution
+
+One way to mitigate these attacks is to somehow bind the transaction into the main chain or fork. In this way, you could put something from the main chain, such as the previous block hash, into the transaction. This mechanism would be like stamping a transaction and would help to secure the blockchain against Long Range Attacks. Stamped transactions would be valid only on the main chain and therefore you wouldn’t be able to use them in any other long fork.
+
+### Checkpoint
+
+Some blockchains suggest to create checkpoints to prevent Long Range attack. This is a naive solution and doesn't solve the problem. First adversary can create the checkpoints also, and more importantly, how often a checkpoint should be created? In the other word, how long can be a Long Range attack!?
+
+
+[^1]: [Algorand Blockchain Features Specification, Version 1.0](https://github.com/algorandfoundation/specs/blob/master/overview/Algorand_v1_spec-2.pdf)
