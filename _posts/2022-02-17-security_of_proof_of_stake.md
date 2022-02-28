@@ -14,6 +14,7 @@ With the mindset of racing between forks, a [Proof of Stake](https://bitcointalk
 This definition is based a wrong assumption. In Proof of Stake blockchains, a fork should never happen at the current height, so there shouldn’t be a “Nothing at Stake” attack.
 
 Let’s dig into it a little deeper. Here are some assumptions:
+
 1. In each height the proposer is deterministically known
 2. More than ⅔ of the stake should be honest and sign the proposed block
 
@@ -36,14 +37,13 @@ keys, no two distinct valid blocks can be produced for the same round. [^1]
 
 Algorand's solution for preventing Long Range attack has some side effects: It added complexity to the codebase and since all participant should provide cryptographic proof for ephemeral keys per round, it increased the network bandwidth.
 
-
 ### Zarb solution
 
 One way to mitigate these attacks is to somehow bind the transaction into the main chain or fork. In this way, you could put something from the main chain, such as the previous block hash, into the transaction. This mechanism would be like stamping a transaction and would help to secure the blockchain against Long Range Attacks. Stamped transactions would be valid only on the main chain and therefore you wouldn’t be able to use them in any other long fork.
 
 ### Checkpoint solution
 
-Some blockchains suggest to create checkpoints to prevent Long Range attack. This is a naive solution and doesn't solve the problem. First adversary can create the checkpoints also, and more importantly, how often a checkpoint should be created? In the other word, how long can be a Long Range attack!?
+Some blockchains suggest to create checkpoints to prevent Long Range attack. This is a naive solution and doesn't solve the problem. First, adversary also can create the checkpoints, and more importantly, how often a checkpoint should be created? In the other word, how long can be a Long Range attack?
 
 ---
 
