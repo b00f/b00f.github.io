@@ -12,7 +12,7 @@ bundle exec jekyll serve
 
 ### Style Guide
 
-Use Prettier to format markdown pages. To run Prettier on the docs folder, run:
+Use Prettier to format markdown pages:
 
 ```
 yarn prettier --write ./_posts
