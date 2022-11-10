@@ -2,10 +2,10 @@
 layout: post
 title: "We are not with you"
 date: 2022-07-19 00:00:00 +0000
-categories:
+categories: literature
 ---
 
-If not the best, one of the best passages in literature is “The Grand Inquisitor”
+One of the best passages in literature is “The Grand Inquisitor”
 story in Fyodor Dostoevsky of The Brothers Karamazov novel.
 
 I like the part that the Grand Inquisitor says to Jesus:
