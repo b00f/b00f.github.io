@@ -37,9 +37,9 @@ keys, no two distinct valid blocks can be produced for the same round. [^1]
 
 Algorand's solution for preventing Long Range attack has some side effects: It added complexity to the codebase and since all participant should provide cryptographic proof for ephemeral keys per round, it increased the network bandwidth.
 
-### Zarb solution
+### Pactus solution
 
-One way to mitigate these attacks is to somehow bind the transaction into the main chain or fork. In this way, you could put something from the main chain, such as the previous block hash, into the transaction. This mechanism would be like stamping a transaction and would help to secure the blockchain against Long Range Attacks. Stamped transactions would be valid only on the main chain and therefore you wouldn’t be able to use them in any other long fork.
+One way to mitigate these attacks is to somehow bind the transaction into the main chain or fork. In this way, you could put something from the main chain, such as the previous block hash, into the transaction. This mechanism would be like [stamping a transaction](https://pactus.org/learn/transaction/stamping/) and would help to secure the blockchain against Long Range Attacks. Stamped transactions would be valid only on the main chain and therefore you wouldn’t be able to use them in any other long fork.
 
 ### Checkpoint solution
 
