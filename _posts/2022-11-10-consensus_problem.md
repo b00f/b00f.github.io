@@ -103,7 +103,7 @@ Now let's look at the possible combination of CAP theorems.
 
 ### Consistency and availability
 
-Protocols like PBFT, Paxos, ABBA and Raft are Consistent and Available if there is no network partitioning. If the network partitioned (example half of the network can’t see the other half) then the consensus will be halted.
+Protocols like PBFT, Paxos, ABBA and Raft are Consistent and Available if there is no network partitioning. If the network partitioned (for example half of the network can’t see the other half) then the consensus will be halted.
 
 <img alt="Consistency and availability" src="../assets/images/cap_theorem_no_partition.png" width="280">
 
@@ -127,5 +127,4 @@ Bitcoin consensus protocol (Nakamoto consensus) sacrifices consistency in favor 
     > **Agreement**: Every correct process must agree on the same value.
 
 [^2]: [Chapter on Distributed Computing](https://www.microsoft.com/en-us/research/publication/2016/12/Distributed-Computing.pdf)
-[^3]: [Chapter on Distributed Computing](https://www.microsoft.com/en-us/research/publication/2016/12/Distributed-Computing.pdf)
-[^4]: [Chapter on Distributed Computing](https://www.microsoft.com/en-us/research/publication/2016/12/Distributed-Computing.pdf)
+
