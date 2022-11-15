@@ -5,7 +5,7 @@ date: 2022-11-10 00:00:00 +0000
 categories: blockchain
 ---
 
-*Special thanks to David Rusu and John Leonard for suggestion and review.*
+_Special thanks to David Rusu and John Leonard for suggestion and review._
 
 ## The consensus problem, definition
 
@@ -127,4 +127,3 @@ Bitcoin consensus protocol (Nakamoto consensus) sacrifices consistency in favor 
     > **Agreement**: Every correct process must agree on the same value.
 
 [^2]: [Chapter on Distributed Computing](https://www.microsoft.com/en-us/research/publication/2016/12/Distributed-Computing.pdf)
-
