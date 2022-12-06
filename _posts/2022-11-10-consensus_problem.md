@@ -97,7 +97,7 @@ CAP theorem is another interesting theorem in distributing systems. Based on the
 
 <img alt="Consistency and availability" src="../assets/images/cap_theorem.png" width="280">
 
-Are the FLP impossibility and CAP theorem related? There is an interesting topic in [Quora](https://www.quora.com/Distributed-Systems/Distributed-Systems-Are-the-FLP-impossibility-result-and-Brewers-CAP-theorem-basically-equivalent) about this question. It is worth reading it. But in general they are not the same thing.
+Are the FLP impossibility and CAP theorem related? There is an interesting topic in [Quora](https://www.quora.com/Distributed-Systems/Distributed-Systems-Are-the-FLP-impossibility-result-and-Brewers-CAP-theorem-basically-equivalent) about this question. It is worth reading it. But in general they are not the same thing. The FLP impossibility theorem deals with the problem of achieving consensus in a distributed system, while the CAP theorem deals with the problem of achieving consistency in a distributed database.
 
 Now let's look at the possible combination of CAP theorems.
 
