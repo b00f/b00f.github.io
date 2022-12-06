@@ -239,9 +239,10 @@ pre {
 }
 
 .svg-icon {
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
   display: inline-block;
+  transform: scale(1.75);
   fill: currentColor;
   padding: 0px;
   vertical-align: text-bottom;
