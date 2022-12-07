@@ -7,7 +7,7 @@ categories: blockchain
 
 _Special thanks to David Rusu and John Leonard for suggestion and review._
 
-## The consensus problem, definition
+## Definition
 
 A protocol that solves Consensus problem[^1] must have thees properties:
 
