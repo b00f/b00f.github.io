@@ -69,10 +69,6 @@ Examples of non-deterministic protocols include:
 - Randomized Byzantine Agreement (RBA)
 - Signature-Free Asynchronous Byzantine Consensus (SF-ABC)
 
-It's worth noting that the Nakamoto consensus protocol, used in Bitcoin, is also considered a non-deterministic protocol.
-It uses proof-of-work, a process involving the solution of a computationally difficult problem, as a means of achieving consensus.
-The random nature of the proof-of-work process means that the protocol is not subject to the limitations of deterministic protocols.
-
 ## CAP theorem
 
 The CAP theorem, also known as Brewer's theorem, is a widely-known result in distributed systems that states that a distributed data store can only provide two out of the following three guarantees:
