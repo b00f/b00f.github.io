@@ -80,7 +80,7 @@ Algorand's solution for preventing Long Range attack has some side effects: It a
 
 ### Pactus solution
 
-One way to mitigate these attacks is to somehow bind the transaction into the main chain or fork.
+One way to prevent these attacks is to somehow bind the transaction into the main chain or fork.
 In this way, we can put something from the main chain, like some part of the previous block hash, into the header of the transactions.
 This mechanism is called [stamping the transaction](https://pactus.org/learn/transaction/stamping/). Stamping transactions helps to secure the blockchain against Long Range Attacks. Stamped transactions would be valid only on the main chain and therefore the attacker wouldn’t be able to use them in any other long fork.
 
