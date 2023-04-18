@@ -19,7 +19,6 @@ including:
 
 - **Liveness**: Eventually, every correct party will decide on some value. A liveness property ensures that something good eventually does happen [^1]. Some papers refer to this property as "termination."
 
-
 ## Network synchrony
 
 Network synchrony is an important factor to consider when designing a consensus protocol. In a **completely asynchronous** model, it is assumed that messages are eventually delivered and processes eventually respond, but no assumption is made about how long this may take. In contrast, **partially synchronous** models introduce the concept of time and assume known upper bounds on message transmission and response times [^1].
@@ -29,7 +28,7 @@ Network synchrony is an important factor to consider when designing a consensus 
 The FLP [^2] impossibility theorem states that it is impossible for a completely asynchronous consensus protocol to tolerate even a single faulty process:
 
 > No completely asynchronous consensus protocol can tolerate even a single unannounced process death. We do
-not consider Byzantine failures, and we assume that the message system is reliable. it delivers all messages correctly and exactly once. [^3]
+> not consider Byzantine failures, and we assume that the message system is reliable. it delivers all messages correctly and exactly once. [^3]
 
 <img alt="FLP impossibility" src="../assets/images/flp_impossibility.png" width="280">
 
@@ -97,10 +96,7 @@ The Bitcoin consensus protocol (Nakamoto consensus) prioritizes availability ove
 
 ---
 
- [^1]: [Chapter on Distributed Computing](https://www.microsoft.com/en-us/research/publication/2016/12/Distributed-Computing.pdf)
-
- [^2]: FLP stands for Fisher, Lynch, and Paterson, the authors of the paper "Impossibility of Distributed Consensus with One Faulty Process."
-
- [^3]: [Impossibility of Distributed Consensus with One Faulty Process](https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf)
-
- [^4]: There is an interesting topic in [Quora](https://www.quora.com/Distributed-Systems/Distributed-Systems-Are-the-FLP-impossibility-result-and-Brewers-CAP-theorem-basically-equivalent) about this.
+[^1]: [Chapter on Distributed Computing](https://www.microsoft.com/en-us/research/publication/2016/12/Distributed-Computing.pdf)
+[^2]: FLP stands for Fisher, Lynch, and Paterson, the authors of the paper "Impossibility of Distributed Consensus with One Faulty Process."
+[^3]: [Impossibility of Distributed Consensus with One Faulty Process](https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf)
+[^4]: There is an interesting topic in [Quora](https://www.quora.com/Distributed-Systems/Distributed-Systems-Are-the-FLP-impossibility-result-and-Brewers-CAP-theorem-basically-equivalent) about this.
