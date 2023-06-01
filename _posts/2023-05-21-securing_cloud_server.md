@@ -38,24 +38,20 @@ cat /etc/passwd | grep /bin/
 ```
 
 For example, in my instance, there is a pre-defined user with root access named `ubuntu`
-Let's delete it first.
+Now, let's delete it first..
 
 ```bash
 userdel -r ubuntu
 ```
 
 The `-r` flag forces the removal of the user’s home directory.
-
 You can also investigate other users of which you might not be aware.
-For example, I found out there was a user for
-[pollinate](https://manpages.ubuntu.com/manpages/trusty/man1/pollinate.1.html) on my server.
-I simply uninstalled it using `apt purge pollinate`, and the user was removed.
 
 **Step 2: Adding new user**
 
 Now, let's add a new user and give it sudo execution privileges.
 
-First, let's ensure `sudo` is installed:
+First, let's ensure that `sudo` is installed:
 
 ```bash
 apt update
@@ -74,14 +70,14 @@ Next, add the user to the `sudo` group:
 adduser pactus sudo
 ```
 
-Finally, Ensure everything is set correctly using the
+Finally, ensure everything is set correctly using the
 [id](https://www.cyberciti.biz/faq/unix-linux-id-command-examples-usage-syntax/) command:
 
 ```bash
 id pactus
 ```
 
-**Step 3: Enable SSH login**
+**Step 3: Enable SSH login for new user**
 
 Now, we're going to connect to the server with the new user.
 
@@ -101,7 +97,7 @@ touch .ssh/authorized_keys
 chmod 600 .ssh/authorized_keys
 ```
 
-Next, you'll need to add the public key to `authorized_keys`.
+Next, you'll need to add the public key to the `authorized_keys` file.
 You can use a new public key or the current SSH key that you're using for the root account.
 
 Finally, verify that the new user can use SSH to connect to the server.
@@ -111,7 +107,7 @@ Run this command from your local computer:
 ssh pactus@<ip address>
 ```
 
-**Step 3: Disable SSH login for root**
+**Step 4: Disable SSH login for root**
 
 At this point, we can disable SSH remote login for the root account.
 
@@ -139,4 +135,4 @@ After making these changes, restart the `sshd` service:
 sudo systemctl restart sshd
 ```
 
-After completing these steps, you will no longer be able to log in using the root account
+Now, you will no longer be able to log in using the root account

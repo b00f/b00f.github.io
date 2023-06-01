@@ -16,15 +16,14 @@ that requires more work and therefore competing with it is hard, in the end, the
 
 With the mindset of racing between forks, a [Proof of Stake](https://bitcointalk.org/index.php?topic=27787.0) blockchain
 looks insecure since there is no work involved, only stake, therefore validators lose nothing if they bet on both forks.
-This is the so-called “Nothing at Stake” attack.
+This is known as “Nothing at Stake” attack.
 
 ### Always available
 
 Nakamoto consensus protocol that is applied in Bitcoin, prioritizes liveness (availability) over safety (consistency).
 In the model, the blockchain is always available but the safety is not guaranteed.
 The below chart shows how an attacker can rewrite the blocks with the probability less than 0.1%.
-For example an attacker with 10% of the mining power can rewrite last 5 blocks and an attacker with 45% of mining power can rewrite
-last 340 blocks, which is 56 hours, or 2.5 days.[^1]
+For example an attacker with 10% of the mining power can rewrite the last 5 blocks (less than one hour), while attacker with 45% of mining power can rewrite the last 340 blocks (about 56 hours, or 2.5 days).[^1]
 
 ![Attacking bitcoin with probability less than 0.01%](../_site/assets/images/../../../assets/images/bitcoin_attacker_probability_less_than_0.001.png)
 
@@ -35,7 +34,7 @@ but the blockchain might not be available, specially when the network is partiti
 
 ![Proof of Stake blockchain](../_site/assets/images/../../../assets/images/proof_of_stake_blockchain.png)
 
-In this model a fork should **never** happen and there shouldn’t be a “Nothing at Stake” attack.
+In this model, a fork should **never** happen and there shouldn’t be a “Nothing at Stake” attack.
 If a fork happens, it is the result of a bad implementation or even worse, the majority of the nodes
 (with more than ⅔ of the total stake) are not loyal and honest.
 
@@ -52,7 +51,7 @@ This branch may contain different information and therefore the attacker can alt
 
 ![Long Range attack](../_site/assets/images/../../../assets/images/long_range_attack.png)
 
-In Bitcoin this kind of attack can be ignored by the honest node:
+In Bitcoin, this kind of attack can be ignored by the honest node:
 
 > Even if this is accomplished... nodes are not going to accept an invalid transaction as payment, and honest nodes
 > will never accept a block containing them. [^1]
@@ -64,8 +63,7 @@ The below chart shows the probability of rewriting blocks by an attacker with 10
 ### It's deadly
 
 The Long Range Attacks are a very [serious attack](https://bitcointalk.org/index.php?topic=1382241.0) for Proof of Stake blockchains.
-Imagine that in a real Proof of Stake blockchain, with random validators, you can obtain (or even buy) the private keys
-from the early validators.
+Imagine in a real Proof of Stake blockchain, with random validators, you can obtain (or even buy) the private keys from the early validators.
 If you have enough keys, you can reorganize a new fork from the early blocks (even from the genesis block!) and attack the blockchain.
 If you consider that there is no work here, just stake, then reorganizing the blockchain is so easy.
 
