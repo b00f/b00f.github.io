@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Secure your cloud server"
-date: 2023-04-14 00:00:00 +0000
+date: 2023-05-21 00:00:00 +0000
 categories: linux
 ---
 
