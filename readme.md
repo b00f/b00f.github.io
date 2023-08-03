@@ -15,14 +15,13 @@ bundle exec jekyll serve
 - Use Prettier to format markdown pages:
 
 ```
-yarn prettier --write ./_posts
+yarn run prettier
 ```
 
 - Exiftool on images
 
 ```
-cd ./assets/images
-for i in *.png; do echo \"Processing $i\"; exiftool -all= \"$i\"; done
+yarn run exif
 ```
 
 
