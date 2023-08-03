@@ -20,16 +20,16 @@ No one gets hurt by exploding a bomb in the desert.
 But what about a decentralized blockchain? What happens if someone finds one of the bombs within the blockchain? There are two real-world scenarios that can happen here:
 
 1. A [white hat](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>) hacker finds the issue first, reports it to the community, and tries to fix it.
-Like disposing the bomb before exploding.
-The [Bitcoin Transaction Malleability](https://www.coindesk.com/markets/2014/02/12/what-the-bitcoin-bug-means-a-guide-to-transaction-malleability/) is a good example of how the community can find, report, and fix a potential issue before it causes any serious damage.
+   Like disposing the bomb before exploding.
+   The [Bitcoin Transaction Malleability](https://www.coindesk.com/markets/2014/02/12/what-the-bitcoin-bug-means-a-guide-to-transaction-malleability/) is a good example of how the community can find, report, and fix a potential issue before it causes any serious damage.
 
-2. A [black hat](<https://en.wikipedia.org/wiki/Black_hat_(computer_security)>)  hacker finds the issue first and exploits it for personal gain.
-This damage can be destructive.
-But even in this case, if a blockchain is truly decentralized, the community can recover the blockchain from the damage.
-I can't imagine a scenario worse than the [DAO attack](https://www.coindesk.com/markets/2020/09/20/did-ethereum-learn-anything-from-the-55m-dao-attack/) in Ethereum.
-In the DAO attack, more than 3.64 million or about 5% of the total supply was hacked.
-But the community decided to undo this attack by forking the blockchain.
-It was controversial and [funny](https://www.youtube.com/watch?v=_O5fdMFKEC0) but it worked!
+2. A [black hat](<https://en.wikipedia.org/wiki/Black_hat_(computer_security)>) hacker finds the issue first and exploits it for personal gain.
+   This damage can be destructive.
+   But even in this case, if a blockchain is truly decentralized, the community can recover the blockchain from the damage.
+   I can't imagine a scenario worse than the [DAO attack](https://www.coindesk.com/markets/2020/09/20/did-ethereum-learn-anything-from-the-55m-dao-attack/) in Ethereum.
+   In the DAO attack, more than 3.64 million or about 5% of the total supply was hacked.
+   But the community decided to undo this attack by forking the blockchain.
+   It was controversial and [funny](https://www.youtube.com/watch?v=_O5fdMFKEC0) but it worked!
 
 In conclusion, **decentralization makes a blockchain secure, not the algorithm**, but the algorithm is important to make a blockchain decentralized.
 A poorly implemented or overly complex blockchain can't be decentralized.

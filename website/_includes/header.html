@@ -1,10 +1,9 @@
 <header class="site-header">
   <div class="wrapper">
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
-    {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
+    {%- assign default_paths = site.pages | map: "path" -%} {%- assign page_paths = site.header_pages | default:
+    default_paths -%} {%- assign titles_size = site.pages | map: 'title' | join: '' | size -%}
     <a class="site-title" rel="author" href="{{ site.url }}">
-      <span class="grey" style="padding-left:10px">{{ site.title }}</span>
+      <span class="grey" style="padding-left: 10px">{{ site.title }}</span>
     </a>
     <div class="site-nav grey">
       <a href="{{ site.url }}/about/">About</a>

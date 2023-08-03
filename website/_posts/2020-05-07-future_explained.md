@@ -36,6 +36,7 @@ In this scenario, each person is similar to an **OS thread**. When you run the a
 - They are **expensive**: You need to hire two persons and pay them daily.
 - They are **costly**: You need to allocate two desks, phone lines, etc.
 -
+
 ### Using Futures
 
 You might consider handling small **tasks** by yourself instead of hiring two persons. In this case, you need to handle the tasks **concurrently** to ensure everything is completed. If you are answering an email, you can put your phone call on **hold**. After sending an email, you can go back to the pending phone call and answer that. Each task becomes a **state machine**, that allows you to pause a task and later resume it.
