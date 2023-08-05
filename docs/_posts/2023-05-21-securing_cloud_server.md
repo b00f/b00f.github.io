@@ -15,7 +15,7 @@ Let's do this step by step.
 Assume you've just created a new Linux server. This guide is based on Debian or Ubuntu systems.
 However, for other distributions, most of the commands will be more or less the same.
 
-**Step 1: Check the current users**
+## Step 1: Check the current users
 
 Connect to the server using SSH:
 
@@ -33,7 +33,7 @@ cat /etc/group | grep "sudo\|root"
 You can also check which users can log in using SSH by reading the
 [/etc/passwd](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/) file
 
-```
+```bash
 cat /etc/passwd | grep /bin/
 ```
 
@@ -47,7 +47,7 @@ userdel -r ubuntu
 The `-r` flag forces the removal of the user’s home directory.
 You can also investigate other users of which you might not be aware.
 
-**Step 2: Adding new user**
+## Step 2: Adding new user
 
 Now, let's add a new user and give it sudo execution privileges.
 
@@ -77,7 +77,7 @@ Finally, ensure everything is set correctly using the
 id pactus
 ```
 
-**Step 3: Enable SSH login for new user**
+## Step 3: Enable SSH login for new user
 
 Now, we're going to connect to the server with the new user.
 
@@ -107,7 +107,7 @@ Run this command from your local computer:
 ssh pactus@<ip address>
 ```
 
-**Step 4: Disable SSH login for root**
+## Step 4: Disable SSH login for root
 
 At this point, we can disable SSH remote login for the root account.
 
@@ -131,7 +131,7 @@ PasswordAuthentication no
 
 After making these changes, restart the `sshd` service:
 
-```
+```bash
 sudo systemctl restart sshd
 ```
 

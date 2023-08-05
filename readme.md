@@ -5,9 +5,7 @@
 First [install](https://jekyllrb.com/docs/installation/ubuntu/) Jekyll.
 
 ```
-gem install jekyll bundler
-bundle install
-bundle exec jekyll serve
+yarn run serve
 ```
 
 ### Useful commands

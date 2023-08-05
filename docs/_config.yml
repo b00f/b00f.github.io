@@ -28,10 +28,8 @@ twitter:
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://b00f.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
-source: docs
-
 #/:categories/:title:output_ext
-permalink:  /:categories/:title
+permalink: /:categories/:title
 google_analytics: UA-1946728-8
 
 # Build settings
@@ -40,11 +38,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-gist
 
-
 minima:
   skin: classic
-
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

@@ -5,6 +5,8 @@
   "repository": "https://github.com/b00f/b00f.github.io/",
   "license": "CC-BY-NC-4.0",
   "scripts": {
+    "install": "cd docs && bundle install",
+    "serve": "cd docs && bundle exec jekyll serve",
     "htmlproofer:setup": "gem install html-proofer",
     "htmlproofer": "htmlproofer --swap-urls 'http\\://localhost\\:4000:' --ignore-status-codes 999,429 --check_internal_hash false --enforce-https false --ignore-urls /cdn./,/discord.gg/,/t.me/,/twitter.com/,/github.com/,/ietf.org/ ./_site",
     "prettier": "prettier --html-whitespace-sensitivity ignore --end-of-line lf --print-width 120 --write ./docs",

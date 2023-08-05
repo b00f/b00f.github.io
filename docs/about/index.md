@@ -8,10 +8,17 @@ Hello 👋
 
 My name is Mostafa Sedaghat Joo and I am a software engineer.
 
+Cinema, music, and software are my main hobbies.
+
+- **Cinema:** I love cinema, but I've never watched the Star Wars movies completely! They're too boring for me.
+- **Music:** I love music, especially from the '60s, '70s, and '80s (old but gold).
+- **Software:** I love software development. Distributed computation and cryptography are my favorite topics.
+
 ## I am writing, so I am
 
 You may have heard the famous quote from René Descartes: "[I think, therefore I am](https://en.wikipedia.org/wiki/Cogito,_ergo_sum)."
-I learned from a person I greatly admire, [Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport), that to think better, we need to write better:
+I learned from a person I truly admire,
+[Leslie Lamport](https://en.wikipedia.org/wiki/Leslie_Lamport), that to think better, we need to write better:
 "You have to write better to think better to write better." ([Think and Write](https://mentors.fm/2019/08/13/think-and-write-with-leslie-lamport/))
 
 So, I try to write here about what I think, to think better.
@@ -23,10 +30,10 @@ If you wish to contact me, you may email me: `mostafa.sedaghat@gmail.com`
 
 ### PGP public key
 
-If you feel the need to encrypt your report with PGP my public key is below,
+If you feel the need to encrypt your email with PGP, my public key is available below,
 or it can be downloaded from [{{ site.url }}/assets/mostafa.sedaghat.asc]({{ site.url }}/assets/mostafa.sedaghat.asc).
 
-```
+```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
 mQINBF9/2hsBEAC6z1LZo+N0XgKd/rhiRxXzfZjszFNRgLZ0VOujffUKbRks/Bty
@@ -83,6 +90,6 @@ PgUgAxbjECCVyafREw==
 
 Fingerprint is:
 
-```
+```text
 F587D477EB1F252C1BCFF43095DA01DFDCA29D88
 ```
