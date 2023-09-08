@@ -20,91 +20,119 @@ However, for other distributions, most of the commands will be more or less the 
 Connect to the server using SSH:
 
 ```bash
-ssh root@<ip_address>
+$ ssh root@<ip_address>
 ```
 
-Check if any pre-defined user has root access by reading the
+To determine which users are members of the `root` and `sudo` groups, inspect the
 [/etc/group](https://www.cyberciti.biz/faq/understanding-etcgroup-file/) file:
 
 ```bash
-cat /etc/group | grep "sudo\|root"
+# cat /etc/group | grep "sudo\|root"
 ```
 
-You can also check which users can log in using SSH by reading the
-[/etc/passwd](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/) file
+After executing the above command, you might see an output similar to:
 
 ```bash
-cat /etc/passwd | grep /bin/
+root:x:0:
+sudo:x:27:
 ```
 
-For example, in my instance, there is a pre-defined user with root access named `ubuntu`
-Now, let's delete it first..
+This output indicates that there are currently no users assigned to the `sudo` or `root` groups.
+
+You can check which users have SSH login capabilities by examining the
+[/etc/passwd](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/) file.
 
 ```bash
-userdel -r ubuntu
+# cat /etc/passwd | grep /bin/
 ```
 
-The `-r` flag forces the removal of the user’s home directory.
-You can also investigate other users of which you might not be aware.
-
-## Step 2: Adding new user
-
-Now, let's add a new user and give it sudo execution privileges.
-
-First, let's ensure that `sudo` is installed:
+Executing this command may produce an output like:
 
 ```bash
-apt update
-apt install sudo
+root:xxxxxxxxxxxxxx:/bin/bash
+sync:xxxxxxxxxxxxxx:/bin/sync
+admin:xxxxxxxxxxxx:/bin/bash
 ```
 
-Now, let's create the new user named `pactus` (you may choose a different name):
+This indicates that the users `root`, `sync`, and `ubuntu` have access to commands like `bash` or `sync`.
+
+To remove all users except `root`:
 
 ```bash
-adduser pactus
+# userdel -r admin
+# userdel -r sync
 ```
 
-Next, add the user to the `sudo` group:
+The `-r` flag deletes the user along with their home directory.
+While it's not strictly necessary to remove the `sync` user, we will.
+
+## Step 2: Add a New User
+
+Let's proceed to add a new user and grant it sudo execution privileges.
+
+First, ensure that `sudo` is installed:
 
 ```bash
-adduser pactus sudo
+# apt update
+# apt install sudo
 ```
 
-Finally, ensure everything is set correctly using the
+Now, create a new user named `pactus` (feel free to choose a different name):
+
+```bash
+# adduser pactus
+```
+
+Then, add this user to the `sudo` group:
+
+```bash
+# adduser pactus sudo
+```
+
+To confirm everything is set up correctly, use the
 [id](https://www.cyberciti.biz/faq/unix-linux-id-command-examples-usage-syntax/) command:
 
 ```bash
-id pactus
+# id pactus
 ```
 
-## Step 3: Enable SSH login for new user
+Running `# cat /etc/group | grep "sudo\|root"` again should now display
+the new user as a member of the `sudo` group.
 
-Now, we're going to connect to the server with the new user.
+## Step 3: Enable SSH Login for New User
 
-First, change the security context to the new account so
-that the new folders and files will have the correct permissions:
+Now, we'll set up the server to allow connections from the new user.
+
+First, switch the security context to the new account to ensure new folders and files have the appropriate permissions:
 
 ```bash
-sudo su - pactus
+# sudo su - pactus
 ```
 
-Create `~/.ssh` folder and authorized_keys:
+Create the `~/.ssh` directory:
 
 ```bash
-mkdir ~/.ssh
-chmod 700 .ssh
-touch .ssh/authorized_keys
-chmod 600 .ssh/authorized_keys
+$ mkdir ~/.ssh
+$ chmod 700 ~/.ssh
 ```
 
-Next, you'll need to add the public key to the `authorized_keys` file.
-You can use a new public key or the current SSH key that you're using for the root account.
-
-Finally, verify that the new user can use SSH to connect to the server.
-Run this command from your local computer:
+Currently, we are logged into the server using the `root` account.
+The public key for SSH access is stored in the `/root/.ssh/authorized_keys` file.
+We will copy this file to `~/.ssh/authorized_keys`, change its ownership to the new user,
+and then delete the original file.
+This will prevent SSH login as `root`.
 
 ```bash
-ssh pactus@<ip address>
+$ sudo cp /root/.ssh/authorized_keys ~/.ssh
+$ sudo chown pactus:pactus ~/.ssh/authorized_keys
+$ sudo rm /root/.ssh/authorized_keys
+```
+
+Now, let's ensure that the new user can use SSH to connect to the server.
+Open a new terminal on your local machine and run:
+
+```bash
+$ ssh pactus@<ip address>
 ```
 
 ## Step 4: Disable SSH login for root
@@ -114,25 +142,25 @@ At this point, we can disable SSH remote login for the root account.
 Open `sshd_config`:
 
 ```bash
-sudo vim /etc/ssh/sshd_config
+$ sudo vim /etc/ssh/sshd_config
 ```
 
 Search for the authentication options and modify the root login permission by setting it to 'no' as shown below:
 
-```bash
+```text
 PermitRootLogin no
 ```
 
 Also, ensure that SSH password login is disabled:
 
-```bash
+```text
 PasswordAuthentication no
 ```
 
 After making these changes, restart the `sshd` service:
 
 ```bash
-sudo systemctl restart sshd
+$ sudo systemctl restart sshd
 ```
 
-Now, you will no longer be able to log in using the root account
+Now, you will no longer be able to log in using the root account.
