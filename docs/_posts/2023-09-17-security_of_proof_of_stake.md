@@ -73,7 +73,7 @@ This attack is known as the "51% attack" in proof-of-work blockchains and "Nothi
 
 ### Proof-of-Work
 
-The consensus mechanism in Proof-of-Work blockchains prioritizes liveness over safety.
+The consensus mechanism in Proof-of-Work blockchains prioritizes liveness over safety[^1].
 This means the blockchain doesn't necessarily provide safety, and there might be more than one valid block at each height.
 
 In the case of Bitcoin, forks can happen but very rarely.
@@ -87,7 +87,7 @@ For example, in Ethereum Classic, we have a history of a 51% attack by
 
 ### Proof-of-Stake
 
-The consensus mechanism in proof-of-stake blockchains can prioritize liveness over safety[^1].
+The consensus mechanism in proof-of-stake blockchains can prioritize liveness over safety.
 Blockchains like Ethereum prioritize liveness, and therefore, attackers with enough stake can create a valid fork.
 
 ![Liveness over safety](../../../assets/images/liveness_over_safety.png)
@@ -104,11 +104,11 @@ In these cases, there's no way to have a fork at the tip of the blockchain.
 If a fork happens, it is the result of a bad implementation or, even worse, the majority of the nodes
 (with more than ⅔ of the total stake) are not loyal and honest.
 So, the Nothing-at-stake attack in these blockchains are not possible.
-Blockchains like Algorand and Pactus are not vulnerable to the Nothing-at-Stake attack,
+Blockchains like [Algorand](https://algorand.com/) and [Pactus](https://pactus.org/) are not vulnerable to the Nothing-at-Stake attack,
 and therefore there is no need for a slashing mechanism there.
 
 ---
 
 [^1]:
     To understand more about the different consensus mechanisms,
-    you can read my post [here](https://b00f.github.io/blockchain/consensus_problem).
+    read [here](https://b00f.github.io/blockchain/consensus_problem).
