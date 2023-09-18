@@ -14,17 +14,17 @@ single value or set of values. A protocol that solves the consensus problem must
 including:
 
 - **Fault tolerance**: If all correct parties propose the same value, any correct party must decide on that value.
-    This ensures that a correct party will not accept a value proposed by a faulty or Byzantine node,
-    and it makes the protocol fault-tolerant.
-    Some papers refer to this property as "integrity" or "validity."
+  This ensures that a correct party will not accept a value proposed by a faulty or Byzantine node,
+  and it makes the protocol fault-tolerant.
+  Some papers refer to this property as "integrity" or "validity."
 
 - **Safety**: Every correct party must decide on the same value, and there should be no fork in the system.
-    A safety property ensures that something bad does not happen [^1].
-    Some papers refer to this property as "agreement."
+  A safety property ensures that something bad does not happen [^1].
+  Some papers refer to this property as "agreement."
 
 - **Liveness**: Eventually, every correct party will decide on some value.
-    A liveness property ensures that something good eventually does happen [^1].
-    Some papers refer to this property as "termination."
+  A liveness property ensures that something good eventually does happen [^1].
+  Some papers refer to this property as "termination."
 
 ## Network synchrony
 
@@ -59,7 +59,7 @@ There are several approaches to solving the consensus problem, each with its own
 ### Prioritize Safety
 
 One way to overcome the FLP impossibility is to prioritize safety over liveness.
-The [Paxos](https://en.wikipedia.org/wiki/Paxos_(computer_science)) consensus protocol was
+The [Paxos](<https://en.wikipedia.org/wiki/Paxos_(computer_science)>) consensus protocol was
 the first protocol that solved the consensus problem by making this assumption.
 Indeed, in Paxos, there may be situations where the protocol cannot be terminated.
 
@@ -136,19 +136,18 @@ This is why Bitcoin is resilient against network partitioning, but it can also r
 ---
 
 [^1]: [Chapter on Distributed Computing](https://www.microsoft.com/en-us/research/publication/2016/12/Distributed-Computing.pdf)
-
-[^2]: FLP stands for Fisher, Lynch, and Paterson, the authors of the paper
+[^2]:
+    FLP stands for Fisher, Lynch, and Paterson, the authors of the paper
     "Impossibility of Distributed Consensus with One Faulty Process."
 
 [^3]: [Impossibility of Distributed Consensus with One Faulty Process](https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf)
-
 [^4]: [Another Advantage of Free Choice: Completely Asynchronous Agreement Protocols](https://homepage.cs.uiowa.edu/~ghosh/BenOr.pdf)
-
 [^5]: [Consensus in the Presence of Partial Synchrony](https://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf)
-
-[^6]: **Strong CAP Principle**. Strong Consistency, High Availability, Partition-resilience: Pick at most 2.
+[^6]:
+    **Strong CAP Principle**. Strong Consistency, High Availability, Partition-resilience: Pick at most 2.
     Look at [Harvest, Yield, and Scalable Tolerant Systems](https://s3.amazonaws.com/systemsandpapers/papers/FOX_Brewer_99-Harvest_Yield_and_Scalable_Tolerant_Systems.pdf)
 
-[^7]: There is an interesting topic in
+[^7]:
+    There is an interesting topic in
     [Quora](https://www.quora.com/Distributed-Systems/Distributed-Systems-Are-the-FLP-impossibility-result-and-Brewers-CAP-theorem-basically-equivalent)
     about this.

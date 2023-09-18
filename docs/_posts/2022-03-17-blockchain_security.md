@@ -24,7 +24,7 @@ There are two real-world scenarios that can happen here:
 1. A [white hat](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>) hacker finds the issue first,
    and tries to fix it before it cause any trouble.
    Like disposing the bomb before exploding.
-   The [Bitcoin Transaction Malleability](https://en.bitcoin.it/wiki/Transaction_malleability/) or
+   The [Bitcoin Transaction Malleability](https://en.bitcoin.it/wiki/Transaction_malleability) or
    [Block Merkle calculation exploit](https://bitcointalk.org/index.php?topic=102395.0)
    are good examples of how the development team can fix potential problems before they cause any serious damage.
 

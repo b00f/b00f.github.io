@@ -109,5 +109,6 @@ and therefore there is no need for a slashing mechanism there.
 
 ---
 
-[^1]: To understand more about the different consensus mechanisms,
+[^1]:
+    To understand more about the different consensus mechanisms,
     you can read my post [here](https://b00f.github.io/blockchain/consensus_problem).
