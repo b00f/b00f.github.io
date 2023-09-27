@@ -31,7 +31,7 @@ If you wish to contact me, you may email me: `mostafa.sedaghat@gmail.com`
 ### PGP public key
 
 If you feel the need to encrypt your email with PGP, my public key is available below,
-or it can be downloaded from [{{ site.url }}/assets/mostafa.sedaghat.asc]({{ site.url }}/assets/mostafa.sedaghat.asc).
+or it can be downloaded from [{{ site.url }}/assets/mostafa.sedaghat.asc]({{ site.url }}assets/mostafa.sedaghat.asc).
 
 ```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----
