@@ -106,7 +106,7 @@ Now, we'll set up the server to allow connections from the new user.
 First, switch the security context to the new account to ensure new folders and files have the appropriate permissions:
 
 ```bash
-# sudo su - pactus
+# su - pactus
 ```
 
 Create the `~/.ssh` directory:
