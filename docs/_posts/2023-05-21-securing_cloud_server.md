@@ -163,4 +163,17 @@ After making these changes, restart the `sshd` service:
 $ sudo systemctl restart sshd
 ```
 
-Now, you will no longer be able to log in using the root account.
+You will no longer be able to log in using the root account.
+
+Next step, lock the `root` account:
+
+```bash
+sudo passwd --delete --lock root
+```
+
+This command delete the root password and lock it.
+You can test if the root is locked:
+
+```bash
+su -
+```
