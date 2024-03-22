@@ -177,3 +177,7 @@ You can test if the root is locked:
 ```bash
 su -
 ```
+
+Reerences:
+
+[Secure Secure Shell](https://blog.stribik.technology/2015/01/04/secure-secure-shell.html)
