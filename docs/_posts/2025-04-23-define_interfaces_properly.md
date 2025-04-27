@@ -8,6 +8,8 @@ categories: others
 I was recently reviewing some code and came across this interface designed for interacting with Redis:
 
 ```go
+package port
+
 import (
 	"time"
 )
@@ -60,26 +62,28 @@ you can achieve similar functionality using embedded structs with method promoti
 Let's apply these improvements into a cleaner, more robust interface:
 
 ```go
+package port
+
 import (
 	"encoding/json"
 	"time"
 )
 
-type Option func(*options)
+type Option func(*Options)
 
-type options struct {
+type Options struct {
 	// Time-To-Live for cached item.
-	ttl time.Duration
+	TTL time.Duration
 }
 
 func WithTTL(ttl time.Duration) Option {
-    return func(opt *CacheOptions) { opt.ttl = ttl }
+	return func(opt *Options) { opt.TTL = ttl }
 }
 
 type CachePort interface {
 	Set(key string, value string, opts ...Option) error
 	Get(key string) (string, error)
-	Delete(keys ...string) error
+	Del(keys ...string) error
 	Exists(key string) (bool, error)
 }
 
