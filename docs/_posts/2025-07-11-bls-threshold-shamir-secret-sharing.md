@@ -20,7 +20,8 @@ signing operations without having to trust a single key holder.
 
 [Adi Shamir](https://en.wikipedia.org/wiki/Adi_Shamir), in his seminal 1979 paper
 "[How to Share a Secret](https://dl.acm.org/doi/pdf/10.1145/359168.359176)",
-introduced a method to split a secret into parts using **Lagrange interpolation** over a finite field.
+introduced a method to split a secret into parts using
+[Lagrange interpolation](https://en.wikipedia.org/wiki/Lagrange_polynomial) over a finite field.
 This technique is known as [Shamir's Secret Sharing (SSS)](https://en.wikipedia.org/wiki/Shamir%27s_secret_sharing) and
 remains one of the most widely used methods for secure secret splitting.
 
@@ -62,3 +63,57 @@ $$
 $$
 
 ## BLS Threshold Signature
+
+In a BLS threshold signature scheme, a trusted dealer distributes $ N $
+shares of the secret signing key to all participating parties using **Shamir's Secret Sharing**.
+
+Each party can independently compute a **partial signature**.
+As long as $ K $ or more parties sign the same message, the final signature can be reconstructed.
+
+Here’s how it works:
+
+1. Let $ \mathcal{T} = \{i_1, i_2, \dots, i_t\} $ be the indices of the $ t $ participants (where $ t \ge K $) who provide partial signatures.
+
+2. Each participant computes their partial signature:
+
+   $$
+   \sigma_{i_j} = s_{i_j} \cdot H(m)
+   $$
+
+   where:
+   - $ s_{i_j} $ is the secret share of participant $ i_j $
+   - $ H(m) \in G_1 $ is the hash of the message mapped to the curve
+
+3. The combiner (aggregator) computes the final signature:
+
+   $$
+   \sigma = \sum_{j=1}^{t} \lambda_{i_j} \cdot \sigma_{i_j}
+   $$
+
+   where $ \lambda_{i_j} $ is the **Lagrange coefficient**:
+
+   $$
+   \lambda_{i_j} = \prod_{\substack{k=1 \\ k \ne j}}^{t} \frac{i_k}{i_k - i_j}
+   $$
+
+4. Substituting the partial signatures:
+
+   $$
+   \sigma = \sum_{j=1}^{t} \lambda_{i_j} \cdot (s_{i_j} \cdot H(m)) = \left( \sum_{j=1}^{t} \lambda_{i_j} \cdot s_{i_j} \right) \cdot H(m)
+   $$
+
+   By Lagrange interpolation, we know:
+
+   $$
+   \sum_{j=1}^{t} \lambda_{i_j} \cdot s_{i_j} = s
+   $$
+
+   where $ s $ is the original secret key.
+
+Thus, the final signature is:
+
+$$
+\sigma = s \cdot H(m)
+$$
+
+Which is the **standard BLS signature**.
