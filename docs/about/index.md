@@ -6,15 +6,46 @@ date: 2023-07-02 00:00:00 +0000
 
 Hello 👋
 
-My name is Mostafa Sedaghat Joo and I am a software engineer.
+My name is Mostafa Sedaghat Joo and I am a software engineer. Nice to meet you.
+I specialize in distributed systems, cryptography, and networking — building things that are reliable, secure, and simple.
 
-Cinema, music, and software are my main hobbies.
+I believe that code is art, and that art is the fountain of youth.
+Just like a painting or sculpture, a well-crafted program can be a masterpiece.
+Leonardo da Vinci once said, **"Simplicity is the ultimate sophistication,"** and I believe creating elegant software means keeping it simple and smart.
 
-- **Cinema:** I love cinema, but I've never watched the Star Wars movies completely! They're too boring for me.
-- **Music:** I love music, especially from the '60s, '70s, and '80s (old but gold).
-- **Software:** I love software development. Distributed computation and cryptography are my favorite topics.
+## La vita è bella
 
-## I am writing, so I am
+Life is beautiful — the touch of a flower, the sound of rain, the fall of sun, the rise of moon.
+The most important thing in life is life itself
+
+I love music, from the '60s, '70s, and '80s, old but gold! Also I am a fan of classical music (Persian, European, and Russian).
+I can't stop listening to [Marooned - Pink Floyd](https://youtu.be/P7YMI39sObY?si=sCk-rpm7lOunJqyw).
+
+I love reading novels. Perhaps the best novel I've read is "[War and Peace](https://en.wikipedia.org/wiki/War_and_Peace)": "It is not beauty that endears, it's love that makes us see beauty."
+
+I love cinema, but I admit that I've never watched the Star Wars or Game of Thrones. They're too boring for me.
+Instead, I love [Twin Peaks](https://en.wikipedia.org/wiki/Twin_Peaks), [The Third Man](https://en.wikipedia.org/wiki/The_Third_Man), [Where Is the Friend's House?](https://en.wikipedia.org/wiki/Where_Is_the_Friend%27s_House%3F), [Chinatown](https://en.wikipedia.org/wiki/Chinatown_(1974_film)) and [Rashomon](https://en.wikipedia.org/wiki/Rashomon). I could add more to this list.
+
+And I love mathematics. Mathematics is the alphabet by which the universe transcribes its secrets. We do not invent mathematics; we are archaeologists of an eternal, invisible architecture.
+My favorite formulas are [Euler's identity](https://en.wikipedia.org/wiki/Euler%27s_identity) and the [Gamma function](https://en.wikipedia.org/wiki/Gamma_function).
+
+<table>
+  <tr>
+    <td align="center"><img src="/assets/images/euler_identity.png" width=256 alt="Euler's Identity" /></td>
+    <td align="center"><img src="/assets/images/gamma_cplot.png" width=256 alt="Gamma Function" /></td>
+  </tr>
+  <tr>
+    <td align="center">$e^{i\pi} + 1 = 0$</td>
+    <td align="center">$\Gamma(z) = \int_0^\infty t^{z-1} e^{-t} \, dt$</td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Euler's Identity</strong></td>
+    <td align="center"><strong>Gamma Function</strong></td>
+  </tr>
+</table>
+
+
+## I write, so I am
 
 You may have heard the famous quote from René Descartes: "[I think, therefore I am](https://en.wikipedia.org/wiki/Cogito,_ergo_sum)."
 I learned from a person I truly admire,
@@ -22,16 +53,19 @@ I learned from a person I truly admire,
 "You have to write better to think better to write better." ([Think and Write](https://mentors.fm/2019/08/13/think-and-write-with-leslie-lamport/))
 
 So, I try to write here about what I think, to think better.
-I believe that many readers of my blog don't like long text, so I try to write short and clear.
+I believe that many readers of my blog don't like long posts, so I try to write short and clear.
 
 ## Contact me
 
-If you wish to contact me, you may email me: `mostafa.sedaghat@gmail.com`
+If you wish to contact me, you may email me: `mostafa.sedaghat@gmail.com`.
+
+You can also find me on [Twitter](https://x.com/mos_joo) and [LinkedIn](https://www.linkedin.com/in/mostafasedaghat/).
+
 
 ### PGP public key
 
 If you feel the need to encrypt your email with PGP, my public key is available below,
-or it can be downloaded from [{{ site.url }}/assets/mostafa.sedaghat.asc]({{ site.url }}assets/mostafa.sedaghat.asc).
+or it can be downloaded from [{{ site.url }}/assets/mostafa.sedaghat.asc]({{ site.url }}/assets/mostafa.sedaghat.asc).
 
 ```text
 -----BEGIN PGP PUBLIC KEY BLOCK-----

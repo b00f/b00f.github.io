@@ -5,7 +5,7 @@
 First [install](https://jekyllrb.com/docs/installation/ubuntu/) Jekyll.
 
 ```
-yarn run serve
+npm run serve
 ```
 
 ### Useful commands
@@ -13,13 +13,13 @@ yarn run serve
 - Use Prettier to format markdown pages:
 
 ```
-yarn run prettier
+npm run prettier
 ```
 
 - Exiftool on images
 
 ```
-yarn run exif
+npm run exif
 ```
 
 
