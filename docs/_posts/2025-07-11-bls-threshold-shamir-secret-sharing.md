@@ -64,15 +64,15 @@ $$
 
 ## BLS Threshold Signature
 
-In a BLS threshold signature scheme, a trusted dealer distributes $ N $
+In a BLS threshold signature scheme, a trusted dealer distributes $n$
 shares of the secret signing key to all participating parties using **Shamir's Secret Sharing**.
 
 Each party can independently compute a **partial signature**.
-As long as $ K $ or more parties sign the same message, the final signature can be reconstructed.
+As long as $k$ or more parties sign the same message, the final signature can be reconstructed.
 
 Here’s how it works:
 
-1. Let $ \mathcal{T} = \{i_1, i_2, \dots, i_t\} $ be the indices of the $ t $ participants (where $ t \ge K $) who provide partial signatures.
+1. Let $ \mathcal{T} = \{i_1, i_2, \dots, i_t\} $ be the indices of the $ t $ participants (where $ t \ge k $) who provide partial signatures.
 
 2. Each participant computes their partial signature:
 
@@ -117,3 +117,8 @@ $$
 $$
 
 This is the **standard BLS signature**.
+
+The beauty of this construction is its simplicity: Shamir's Secret Sharing and BLS signatures
+combine naturally because both rely on linear operations over the same group.
+This makes BLS an ideal candidate for threshold signing —
+far simpler than threshold ECDSA protocols, which require complex multi-round MPC.

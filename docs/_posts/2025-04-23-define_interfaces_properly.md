@@ -41,21 +41,12 @@ But you wouldn’t describe a *Rose* as an interface, that’s too specific.
 Naming an interface `RedisPort` is too specific.
 It’s better to name it something more general, like `CachePort`.
 
-## Interfaces Should Be Cohesive
+## Extending Interfaces Through Composition
 
-Another improvement is to remove the `Close()` method.
-It doesn't align with the rest of the interface, which focuses on caching operations.
-Including `Close()` is like adding "can die" to describe a flower.
-Sure, everything dies, but it's not relevant to the core behavior we're describing.
-
-Interfaces should expose **harmonious** methods that embody a single responsibility or
-a cohesive set of behaviors.
-
-## Interfaces Can Support Partial Implementation
-
-Some languages like Rust allow partial implementation of traits.
-While Go doesn't support this natively with interfaces,
-you can achieve similar functionality using embedded structs with method promotion.
+While Go doesn't support partial implementation of interfaces natively,
+you can achieve similar results through struct embedding and method promotion.
+This allows you to build richer functionality on top of a minimal interface
+without forcing every implementation to carry the extra weight.
 
 ## A Cleaner, More Flexible Interface
 

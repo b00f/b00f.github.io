@@ -6,17 +6,21 @@ categories: linux
 ---
 
 Imagine you are going to perform a stress test.
-You want to restart a service repeatedly to make sure the whole system is fault tolerant.
-`watch` is your magic command here. You can use `watch` command to repeat a task.
+You want to restart a service repeatedly to make sure the whole system is fault-tolerant.
+`watch` is your magic command here. You can use the `watch` command to repeat a task.
 
-For example you can restart a docker service every 10 seconds:
+For example you can restart a Docker service every 10 seconds:
 
 {% highlight bash %}
 watch -n 10 docker restart my_service
 {% endhighlight %}
 
-This is simple but makes your life easier. Trust me!
+The `-d` flag highlights the differences between each refresh, making it easy to spot changes at a glance:
 
-You can use [tmux](https://github.com/tmux/tmux/wiki) to restart a service in one pane and
-watch another service in another pane.
-Keep tmux open for a day, it's fun!
+{% highlight bash %}
+watch -d -n 10 docker restart my_service
+{% endhighlight %}
+
+This is simple but makes your life easier. Give it a try!
+
+You can also pair `watch` with [tmux](https://github.com/tmux/tmux/wiki) to monitor multiple services side by side.

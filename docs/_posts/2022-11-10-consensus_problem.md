@@ -41,7 +41,7 @@ tolerate even a single faulty process:
 
 > No completely asynchronous consensus protocol can tolerate even a single unannounced process death. We do
 > not consider Byzantine failures, and we assume that the message system is reliable.
-> it delivers all messages correctly and exactly once. [^3]
+> It delivers all messages correctly and exactly once. [^3]
 
 <img alt="FLP impossibility" src="../assets/images/flp_impossibility.png" width="280">
 
@@ -116,7 +116,7 @@ although they both relate to distributed systems.
 The FLP impossibility theorem deals with the problem of achieving consensus in a distributed system,
 while the CAP theorem deals with the problem of achieving consistency in a distributed database.
 
-Now let's look at the possible combinations of CAP theorems.
+Now let's look at the possible combinations of the CAP theorem.
 
 ### Consistency and Availability (CA)
 

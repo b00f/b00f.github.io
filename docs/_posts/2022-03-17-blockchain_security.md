@@ -23,10 +23,10 @@ There are two real-world scenarios that can happen here:
 
 1. A [white hat](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>) hacker finds the issue first,
    and tries to fix it before it causes any trouble.
-   Like disposing the bomb before exploding.
+   Like disposing of the bomb before it explodes.
    The [Bitcoin Transaction Malleability](https://en.bitcoin.it/wiki/Transaction_malleability) or
    [Block Merkle calculation exploit](https://bitcointalk.org/index.php?topic=102395.0)
-   are good examples of how the development team can fix potential problems before they cause any serious damage.
+   is a good example of how the development team can fix potential problems before they cause any serious damage.
 
 2. A [black hat](<https://en.wikipedia.org/wiki/Black_hat_(computer_security)>) hacker finds the issue first and
    exploits it for personal gain or to ruin the blockchain's reputation.
@@ -34,9 +34,11 @@ There are two real-world scenarios that can happen here:
    recover the blockchain from the damage. It's hard to imagine a scenario worse than the DAO attack on Ethereum.
    In the DAO attack, more than 3.64 million ETH or about 5% of the total supply was hacked.
    But the community decided to undo this attack by forking the blockchain.
-   It was controversial and [funny](https://www.youtube.com/watch?v=_O5fdMFKEC0), but it worked!
+   It was controversial, but it worked[^1]!
 
 In conclusion, **decentralization makes a blockchain secure, not the algorithm,
 but the algorithm is important to make a blockchain decentralized**.
 A poorly implemented or overly complex blockchain can't be decentralized.
-It is a chicken and egg story.
+It is a chicken-and-egg story.
+
+[^1]: [The DAO Fork — a short comedy sketch](https://www.youtube.com/watch?v=_O5fdMFKEC0)

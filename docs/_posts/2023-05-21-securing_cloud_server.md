@@ -27,7 +27,7 @@ To determine which users are members of the `root` and `sudo` groups, inspect th
 [/etc/group](https://www.cyberciti.biz/faq/understanding-etcgroup-file/) file:
 
 ```bash
-# cat /etc/group | grep "sudo\|root"
+# grep "sudo\|root" /etc/group
 ```
 
 After executing the above command, you might see an output similar to:
@@ -43,7 +43,7 @@ You can check which users have SSH login capabilities by examining the
 [/etc/passwd](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/) file.
 
 ```bash
-# cat /etc/passwd | grep /bin/
+# grep /bin/ /etc/passwd
 ```
 
 Executing this command may produce an output like:
@@ -96,7 +96,7 @@ To confirm everything is set up correctly, use the
 # id pactus
 ```
 
-Running `# cat /etc/group | grep "sudo\|root"` again should now display
+Running `# grep "sudo\|root" /etc/group` again should now display
 the new user as a member of the `sudo` group.
 
 ## Step 3: Enable SSH Login for New User
@@ -116,17 +116,24 @@ $ mkdir ~/.ssh
 $ chmod 700 ~/.ssh
 ```
 
-Currently, we are logged into the server using the `root` account.
-The public key for SSH access is stored in the `/root/.ssh/authorized_keys` file.
-We will copy this file to `~/.ssh/authorized_keys`, change its ownership to the new user,
-and then delete the original file.
-This will prevent SSH login as `root`.
+Now, create the `authorized_keys` file and open it for editing:
 
 ```bash
-$ sudo cp /root/.ssh/authorized_keys ~/.ssh
-$ sudo chown pactus:pactus ~/.ssh/authorized_keys
-$ sudo rm /root/.ssh/authorized_keys
+$ touch ~/.ssh/authorized_keys
+$ chmod 600 ~/.ssh/authorized_keys
+$ vim ~/.ssh/authorized_keys
 ```
+
+Paste your public key into this file, save, and exit.
+
+A quick note on permissions: `chmod 700` on the `.ssh` directory means only the owner
+can read, write, or enter it. `chmod 600` on `authorized_keys` means only the owner
+can read or write the file. SSH is strict about this — if the directory or file is
+accessible by group or others, SSH will refuse to use it for authentication.
+
+**Important**: Before disabling root login, verify that you can successfully SSH in as the new user
+from a separate terminal. If the new user's SSH fails and you've already locked root,
+you'll be locked out of the server.
 
 Now, let's ensure that the new user can use SSH to connect to the server.
 Open a new terminal on your local machine and run:
@@ -171,7 +178,7 @@ Next step, lock the `root` account:
 sudo passwd --delete --lock root
 ```
 
-This command deletes the root password and lock it.
+This command deletes the root password and locks it.
 You can test if the root is locked:
 
 ```bash

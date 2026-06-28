@@ -50,9 +50,9 @@ You might consider handling small **tasks** by yourself instead of hiring two pe
 In this case, you need to handle the tasks **concurrently** to ensure everything is completed.
 If you are answering an email, you can put your phone call on **hold**.
 After sending an email, you can go back to the pending phone call and answer that.
-Each task becomes a **state machine**, that allows you to pause a task and later resume it.
+Each task becomes a **state machine** that allows you to pause a task and later resume it.
 
-Let’s implement it using Rust’s Futures. A Future in Rust is a task that is going to be done in future.
+Let’s implement it using Rust’s Futures. A Future in Rust is a task that is going to be done in the future.
 It sounds similar to a Promise in JavaScript, but it’s not the same thing!
 We will get back to that later, so in the meantime, here is our code with Future:
 
@@ -116,8 +116,13 @@ In JavaScript Promises are based on callbacks. It is a push based model. In Rust
 In JavaScript, promises are automatically started when you define them (JavaScript has a built-in runtime).
 However, Futures in Rust are lazy, which means that they do not run until they are polled.
 You need to define a runtime and manually execute a task, which can give you more control over your tasks.
-Executing a future in Rust doesn't require allocating even a single byte in the heap memory,
-which is why Futures in Rust are more powerful than Promises in JavaScript.
+Executing a future in Rust doesn't require heap allocation in most cases,
+which is why Futures in Rust are more efficient than Promises in JavaScript.
+
+So, to bring it all back to our call center: threads are like hiring dedicated staff — simple but expensive.
+Futures are like handling everything yourself — more efficient, but you need to be disciplined about
+switching between tasks and not getting stuck on one thing. Rust's async model gives you that discipline
+at compile time, without the runtime cost.
 
 ---
 

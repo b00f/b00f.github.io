@@ -13,10 +13,10 @@ In this article, we'll explore these potential malicious behaviors.
 
 ## Long Range problem
 
-In a Long-Range problem, an adversary chooses a block from the past and try to create an alternate chain starting from that block.
+In a Long-Range problem, an adversary chooses a block from the past and tries to create an alternate chain starting from that block.
 The main goal is to rewrite the blockchain's history.
 By doing so, they can add or remove transactions they desire.
-Because the fork begins from an earlier point in the blockchain, it is termed as "Long-Range" problem.
+Because the fork begins from an earlier point in the blockchain, it is termed a "Long-Range" problem.
 
 ![Long Range problem](../../../assets/images/long_range_problem.png)
 
@@ -74,13 +74,13 @@ This means the blockchain doesn't necessarily provide safety, and there might be
 ![Liveness over safety](../../../assets/images/liveness_over_safety.png)
 
 In the case of Bitcoin, forks can happen but very rarely.
-And since the hashing power is high, the chance of an adversary creating a fork longer than two blocks is really low.
+Since the hashing power is high, the chance of an adversary creating a fork longer than two blocks is really low.
 This is why in many exchanges, you have to wait for at least 2 block confirmations before withdrawing or depositing your Bitcoins.
 
 Most people think that proof-of-work blockchains are more secure than other consensus types,
-but in the real world, Proof-of-Work blockchains are more vulnerable to this problem.
-For example, in Ethereum Classic, we have a history of a 51% problem by
-[injecting](https://hackmd.io/@cUBb4hAvQciAEPoU2yfrzQ/Skd4X6MZw) more than 3000 blocks by only one miner.
+but in the real world, Proof-of-Work blockchains have been more vulnerable to 51% attacks specifically.
+For example, in Ethereum Classic, there is a history of a 51% attack
+[injecting](https://hackmd.io/@cUBb4hAvQciAEPoU2yfrzQ/Skd4X6MZw) more than 3000 blocks by a single miner.
 
 ### Proof-of-Stake
 

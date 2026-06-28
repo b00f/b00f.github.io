@@ -23,7 +23,7 @@ _A monolithic application describes a single-tiered software application in whic
 data access code are combined into a single program from a single platform._ [^1]
 
 You are most likely using your web browser to read this post.
-A browser is a good example of Monolithic software.
+A text editor like Vim or Notepad is a good example of monolithic software.
 
 Monolithic software is easy to develop, test, and release.
 However, it cannot scale.
@@ -60,7 +60,7 @@ To deploy and manage an Orchestrated Distributed system, you need an orchestrato
 application deployment, scaling, and management.”[^2]
 
 [Netflix](https://www.netflix.com/) is a good example of a Distributed Application.
-It contains dozens of [microservice](https://microservices.io/), each with a Single Responsibility,
+It contains dozens of [microservices](https://microservices.io/), each with a Single Responsibility,
 and utilizes orchestration tools to coordinate these services.
 
 ### Decentralized System
@@ -90,7 +90,7 @@ However, decentralized systems are more scalable than centralized systems.
 ## Blockchain
 
 <img style="float: right;" alt="Blockchain" src="../assets/images/distributed_vs_decentralized-blockchain.png">
-Decentralized systems are vulnerable to Sybil attacks, where an attacker creates multiple fake identities
+As mentioned earlier, decentralized systems are vulnerable to Sybil attacks, where an attacker creates multiple fake identities
 in order to manipulate the network.
 To address this issue, blockchain technology introduces a consensus mechanism to ensure that
 all nodes in the network have the same state (also known as a [replicated state machine](https://en.wikipedia.org/wiki/State_machine_replication)).
