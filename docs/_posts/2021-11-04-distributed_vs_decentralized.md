@@ -74,7 +74,7 @@ Queens are responsible for laying eggs and ensuring the growth of the colony,
 while males have the role of mating with the queen to continue the lineage.
 The ant colony is a decentralized system where the ants serve as nodes in the network, and there is no orchestrator._
 
-In a Decentralized system (or what I like to call a Non-Orchestrated Distributed system), there is no central.
+In a Decentralized system (or what I like to call a Non-Orchestrated Distributed system), there is no central authority.
 Unlike Orchestrated Distributed systems, where there's a central entity controlling the various components,
 a Non-Orchestrated Distributed system relies on the individual nodes themselves to handle coordination and management.
 When a new node enters the network, it informs other nodes, and the other nodes try to help it join the network.
@@ -90,7 +90,7 @@ However, decentralized systems are more scalable than centralized systems.
 ## Blockchain
 
 <img style="float: right;" alt="Blockchain" src="../assets/images/distributed_vs_decentralized-blockchain.png">
-decentralized systems are vulnerable to Sybil attacks, where an attacker creates multiple fake identities
+Decentralized systems are vulnerable to Sybil attacks, where an attacker creates multiple fake identities
 in order to manipulate the network.
 To address this issue, blockchain technology introduces a consensus mechanism to ensure that
 all nodes in the network have the same state (also known as a [replicated state machine](https://en.wikipedia.org/wiki/State_machine_replication)).

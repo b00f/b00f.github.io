@@ -25,5 +25,5 @@ You can also search for items easily in the clipboard history.
 
 ## Installation
 
-To install the latest release, visit Gnome Trash on the
+To install the latest release, visit Gnome Clipboard on the
 [Official GNOME Extensions](https://extensions.gnome.org/extension/4422/gnome-clipboard/) page.

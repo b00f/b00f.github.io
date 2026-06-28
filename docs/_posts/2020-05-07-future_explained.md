@@ -5,13 +5,13 @@ date: 2020-05-07 00:00:00 +0000
 categories: rust
 ---
 
-Imaging we are going to write an application for a call center to answer some emails and phone calls daily.
+Imagine we are going to write an application for a call center to answer some emails and phone calls daily.
 For the sake of simplicity, we answer 5 emails and phone calls daily. Let’s start.
 
 ### Using threads
 
-To run our call center we can hire two people to answer the phones and respond the email **in parallel**.
-In this case, our call center application would like this:
+To run our call center we can hire two people to answer the phones and respond to the email **in parallel**.
+In this case, our call center application would look like this:
 
 {% gist 23c7b4f6f6eae5c454d890d6289757b8 %}
 
@@ -54,7 +54,7 @@ Each task becomes a **state machine**, that allows you to pause a task and later
 
 Let’s implement it using Rust’s Futures. A Future in Rust is a task that is going to be done in future.
 It sounds similar to a Promise in JavaScript, but it’s not the same thing!
-We will get back to that later, so in the mean-time, here is our code with Future:
+We will get back to that later, so in the meantime, here is our code with Future:
 
 {% gist 3f1bf444a56b130909c6a2de8fbb8e7d %}
 
@@ -111,7 +111,7 @@ allowing other tasks to be scheduled. Eventually, the yielding task will be poll
 ### Rust’s Futures vs JavaScript’s Promises
 
 Futures in Rust are similar to Promises in JavaScript, but there is a basic difference between them.
-In JavaScrip Promises are based on callbacks. It is a push based model. In Rust, Futures are poll based.
+In JavaScript Promises are based on callbacks. It is a push based model. In Rust, Futures are poll-based.
 
 In JavaScript, promises are automatically started when you define them (JavaScript has a built-in runtime).
 However, Futures in Rust are lazy, which means that they do not run until they are polled.

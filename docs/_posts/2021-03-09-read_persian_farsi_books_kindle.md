@@ -11,7 +11,6 @@ If you have a Kindle and want to read Persian, Arabic, or Hebrew eBooks,
 you have probably noticed that there are lots of issues with decoding the book.
 If you're lucky, the words are decoded correctly, but the sentences are displayed in the wrong order.
 This is particularly because the sentences are shown from left to right (LTR), rather than right to left.
-Solution
 
 ## Solution
 

@@ -11,7 +11,7 @@ But sometimes you have a sequence of decimal numbers, and you want to calculate 
 `bc` command is your magic tool.
 The `bc` command in Linux is a command-line utility that stands for "basic calculator".
 It provides a simple way to perform mathematical calculations within the terminal.
-Here's an example of how to use `bc` command for simple mathematic calculation:
+Here's an example of how to use `bc` command for simple mathematical calculation:
 
 {% highlight bash %}
 $ echo "2 + 2" | bc
