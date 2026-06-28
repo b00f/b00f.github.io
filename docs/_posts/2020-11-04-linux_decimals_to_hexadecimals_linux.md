@@ -19,6 +19,11 @@ $ echo "2 + 2" | bc
 {% endhighlight %}
 
 We can use the `bc` command to convert decimal numbers to their hexadecimal equivalent.
+`bc` uses two special variables for base conversion:
+**`ibase`** (input base) sets the base of the numbers you provide,
+and **`obase`** (output base) sets the base of the result.
+By default, both are set to 10 (decimal).
+
 For example, we can use `bc` to obtain the hexadecimal values for: `[170 187 204 221 238 255]`:
 
 {% highlight bash %}
@@ -31,7 +36,9 @@ EE
 FF
 {% endhighlight %}
 
-You can play with the `obase` and `ibase` options. For instance you can convert hexadecimals to decimals like this:
+You can play with the `obase` and `ibase` options.
+One important note: always set `ibase` before `obase`, otherwise `obase` will be interpreted in the new base.
+For instance you can convert hexadecimal to decimal like this:
 {% highlight bash %}
 $ echo "ibase=16; AA;BB;CC;DD;EE;FF" | bc
 170
