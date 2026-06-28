@@ -46,7 +46,7 @@ It’s better to name it something more general, like `CachePort`.
 Another improvement is to remove the `Close()` method.
 It doesn't align with the rest of the interface, which focuses on caching operations.
 Including `Close()` is like adding "can die" to describe a flower.
-Sure, everything dies, but it's not relevant to the core behavior we’re describing
+Sure, everything dies, but it's not relevant to the core behavior we're describing.
 
 Interfaces should expose **harmonious** methods that embody a single responsibility or
 a cohesive set of behaviors.
@@ -59,7 +59,7 @@ you can achieve similar functionality using embedded structs with method promoti
 
 ## A Cleaner, More Flexible Interface
 
-Let's apply these improvements into a cleaner, more robust interface:
+Let's apply these improvements to create a cleaner, more robust interface:
 
 ```go
 package port

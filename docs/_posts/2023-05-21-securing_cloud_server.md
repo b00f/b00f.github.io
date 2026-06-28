@@ -54,7 +54,7 @@ sync:xxxxxxxxxxxxxx:/bin/sync
 admin:xxxxxxxxxxxx:/bin/bash
 ```
 
-This indicates that the users `root`, `sync`, and `ubuntu` have access to commands like `bash` or `sync`.
+This indicates that the users `root`, `sync`, and `admin` have access to commands like `bash` or `sync`.
 
 To remove all users except `root`:
 
@@ -171,13 +171,13 @@ Next step, lock the `root` account:
 sudo passwd --delete --lock root
 ```
 
-This command delete the root password and lock it.
+This command deletes the root password and lock it.
 You can test if the root is locked:
 
 ```bash
 su -
 ```
 
-Reerences:
+References:
 
 [Secure Secure Shell](https://blog.stribik.technology/2015/01/04/secure-secure-shell.html)

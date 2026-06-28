@@ -13,8 +13,8 @@ In this article, we'll explore these potential malicious behaviors.
 
 ## Long Range problem
 
-In a Long-Range problem, adversary choose a block from the past and try to create an alternate chain starting from that block.
-The main goal is to rewrite the blockchain's history
+In a Long-Range problem, an adversary chooses a block from the past and try to create an alternate chain starting from that block.
+The main goal is to rewrite the blockchain's history.
 By doing so, they can add or remove transactions they desire.
 Because the fork begins from an earlier point in the blockchain, it is termed as "Long-Range" problem.
 
@@ -46,13 +46,13 @@ In some blockchains, like [Bitcoin SV](https://www.bitcoinsv.com/), the hashing 
 ### Proof-of-Stake
 
 This problem in Proof-of-Stake (PoS) blockchains appears more [serious](https://bitcointalk.org/index.php?topic=1382241.0).
-In these blockchains, adversary can obtain (or even purchase) the private keys from early validators.
+In these blockchains, an adversary can obtain (or even purchase) the private keys from early validators.
 If they possess enough keys, they can reorganize a new fork from early blocks (even from the genesis block!).
 Considering there is no actual work involved, just staking, reorganizing the blockchain becomes very easy.
 
 ### Solution
 
-So, as you can see, most blockchains appear vulnerable to long-range problem.
+So, as you can see, most blockchains appear vulnerable to the long-range problem.
 However, this problem is not serious and can even be ignored.
 **Simply because any chain that looks new can be ignored,**
 and miners or validators can always add blocks to the chain they know.

@@ -22,7 +22,7 @@ Our kingdom is built on your name. Why have you come back now to trouble us? Go,
 
 ## Security or Freedom
 
-In my point of view, the story is philosophical battle between the freedom and security.
+From my point of view, the story is a philosophical battle between freedom and security.
 The Grand Inquisitor argues that humanity cannot handle the burden of true freedom, as granted by Jesus,
 and that people would rather have security and happiness, even if it means sacrificing that freedom.
 

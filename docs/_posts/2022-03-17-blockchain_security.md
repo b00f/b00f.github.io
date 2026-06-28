@@ -22,17 +22,17 @@ What happens if someone finds one of these "bombs" within the blockchain?
 There are two real-world scenarios that can happen here:
 
 1. A [white hat](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>) hacker finds the issue first,
-   and tries to fix it before it cause any trouble.
+   and tries to fix it before it causes any trouble.
    Like disposing the bomb before exploding.
    The [Bitcoin Transaction Malleability](https://en.bitcoin.it/wiki/Transaction_malleability) or
    [Block Merkle calculation exploit](https://bitcointalk.org/index.php?topic=102395.0)
    are good examples of how the development team can fix potential problems before they cause any serious damage.
 
 2. A [black hat](<https://en.wikipedia.org/wiki/Black_hat_(computer_security)>) hacker finds the issue first and
-3. exploits it for personal gain or to ruin the blockchain's reputation.
+   exploits it for personal gain or to ruin the blockchain's reputation.
    This damage can be destructive. But even in this case, if a blockchain is truly decentralized, the community can
    recover the blockchain from the damage. It's hard to imagine a scenario worse than the DAO attack on Ethereum.
-   In the DAO attack, more than 3.64 million or about 5% of the total supply was hacked.
+   In the DAO attack, more than 3.64 million ETH or about 5% of the total supply was hacked.
    But the community decided to undo this attack by forking the blockchain.
    It was controversial and [funny](https://www.youtube.com/watch?v=_O5fdMFKEC0), but it worked!
 

@@ -5,7 +5,7 @@ date: 2022-11-10 00:00:00 +0000
 categories: blockchain
 ---
 
-_Special thanks to David Rusu and John Leonard for suggestion and review._
+_Special thanks to David Rusu and John Leonard for their suggestions and review._
 
 ## Consensus in Distributed Systems
 
@@ -86,7 +86,7 @@ sacrificing safety to ensure liveness.
 
 ### Partial Synchrony
 
-The DLS[^5] consensus algorithm was the first protocol that introduce a partially synchronous model.
+The DLS[^5] consensus algorithm was the first protocol that introduced a partially synchronous model.
 It was proposed by Cynthia Dwork, Nancy Lynch, and Larry Stockmeyer in their paper
 "Consensus in the presence of partial synchrony" published in 1988.
 
@@ -116,7 +116,7 @@ although they both relate to distributed systems.
 The FLP impossibility theorem deals with the problem of achieving consensus in a distributed system,
 while the CAP theorem deals with the problem of achieving consistency in a distributed database.
 
-Now let's look at the possible combination of CAP theorems.
+Now let's look at the possible combinations of CAP theorems.
 
 ### Consistency and Availability (CA)
 

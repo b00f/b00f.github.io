@@ -116,4 +116,4 @@ $$
 \sigma = s \cdot H(m)
 $$
 
-Which is the **standard BLS signature**.
+This is the **standard BLS signature**.

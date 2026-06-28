@@ -30,5 +30,5 @@ may be required to mitigate the risks associated with such attacks.
 
 ---
 
-[^1]: [Bitcoin whitepaper ](https://en.wikipedia.org/wiki/Monolithic_application)
+[^1]: [Bitcoin whitepaper](https://bitcoin.org/bitcoin.pdf)
 [^2]: [Algorand white paper](https://people.csail.mit.edu/nickolai/papers/gilad-algorand-eprint.pdf)

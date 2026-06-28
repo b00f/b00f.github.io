@@ -6,8 +6,8 @@ categories: linux
 ---
 
 Imagine you are going to perform a stress test.
-You want to restart a service repeatably to make sure the whole system is fault tolerant.
-`watch` is you magic command here. You can use `watch` command to repeat a task.
+You want to restart a service repeatedly to make sure the whole system is fault tolerant.
+`watch` is your magic command here. You can use `watch` command to repeat a task.
 
 For example you can restart a docker service every 10 seconds:
 
