@@ -1,0 +1,16 @@
+{
+  "name": "b00f",
+  "short_name": "b00f",
+  "description": "Mostafa Sedaghat Joo's Blog",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#1a1a2e",
+  "icons": [
+    {
+      "src": "/assets/favicon-96x96.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

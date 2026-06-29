@@ -19,23 +19,37 @@
 # in the templates via {{ site.myvariable }}.
 
 title: b00f
-description: I write, so I am
+description: Personal blog by Mostafa Sedaghat Joo.
 tagline: Mostafa Sedaghat Joo's Blog
-author: Mostafa Sedaghat Joo
+author:
+  name: Mostafa Sedaghat Joo
+  twitter: mos_joo
+lang: en_US
+logo: /assets/favicon.svg
+
 twitter:
   username: mos_joo
+  card: summary
+
+social:
+  name: Mostafa Sedaghat Joo
+  links:
+    - https://x.com/mos_joo
+    - https://www.linkedin.com/in/mostafasedaghat/
+    - https://github.com/b00f
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://b00f.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://b00f.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
 #/:categories/:title:output_ext
 permalink: /:categories/:title
-google_analytics: UA-1946728-8
+google_analytics: G-K7DQC13PPW
 
 # Build settings
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-sitemap
   - jekyll-gist
 
 minima:
