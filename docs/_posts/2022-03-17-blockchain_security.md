@@ -5,8 +5,6 @@ date: 2022-03-17 00:00:00 +0000
 categories: blockchain
 ---
 
-<img alt="Blockchain Security" src="../assets/images/blockchain-security.jpg" width="480">
-
 *Dedicated to my dear friend Thanos.*
 
 Consider a blockchain project with thousands of lines of code as a black box.
@@ -44,5 +42,7 @@ In conclusion, **decentralization makes a blockchain secure, not the algorithm,
 but the algorithm is important to make a blockchain decentralized**.
 A poorly implemented or overly complex blockchain can't be decentralized.
 It is a chicken-and-egg story.
+
+<img alt="Blockchain Security" src="../assets/images/blockchain-security.jpg" width="480">
 
 [^1]: [The DAO Fork — a short comedy sketch](https://www.youtube.com/watch?v=_O5fdMFKEC0)
