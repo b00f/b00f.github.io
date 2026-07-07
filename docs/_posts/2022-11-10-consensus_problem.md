@@ -65,12 +65,24 @@ Indeed, in Paxos, there may be situations where the protocol cannot be terminate
 
 #### Probabilistic Binary Agreements
 
-Some protocols address the FLP impossibility by introducing a random function within the agreement protocol.
+Some protocols address the FLP impossibility by introducing a **random function** within the agreement protocol.
 In this scenario, when the network diverges, each party randomly chooses a value between zero and one,
 like flipping a coin.
 Even though these protocols employ a random function, they ensure safety or agreement,
 meaning that eventually all parties agree on the same value: zero or one.
 This approach was first offered by Ben-Or[^4] in 1983.
+
+#### Partial Synchrony
+
+The DLS[^5] consensus algorithm was the first protocol that introduced a partially synchronous model.
+It was proposed by Cynthia Dwork, Nancy Lynch, and Larry Stockmeyer in their paper
+"Consensus in the presence of partial synchrony" published in 1988.
+
+Consensus protocols like Practical Byzantine Fault Tolerance (PBFT)[^6],
+follow this assumption by setting an **upper-bound timer** that
+prevents the system from waiting indefinitely in the event of node failure.
+From an FLP perspective, a synchronous consensus algorithm can provide safety,
+but with weaker liveness.
 
 <img alt="Prioritize Safety" src="../assets/images/flp_liveness_sacrificed.png" width="280">
 
@@ -84,22 +96,9 @@ sacrificing safety to ensure liveness.
 
 <img alt="Prioritize liveness" src="../assets/images/flp_safety_sacrificed.png" width="280">
 
-### Partial Synchrony
-
-The DLS[^5] consensus algorithm was the first protocol that introduced a partially synchronous model.
-It was proposed by Cynthia Dwork, Nancy Lynch, and Larry Stockmeyer in their paper
-"Consensus in the presence of partial synchrony" published in 1988.
-
-Most consensus protocols follow this assumption by setting an upper-bound timer that
-prevents the system from waiting indefinitely in the event of node failure.
-From an FLP perspective, a synchronous consensus algorithm can provide safety,
-but with weaker liveness.
-
-<img alt="Synchronous consensus" src="../assets/images/flp_weak_liveness.png" width="280">
-
 ## CAP theorem
 
-The Strong CAP Principle[^6], also known as the CAP theorem or Brewer's theorem,
+The Strong CAP Principle[^7], also known as the CAP theorem or Brewer's theorem,
 is widely known in the field of distributed systems.
 It strongly states that a distributed data store can only guarantee two out of the following three properties:
 
@@ -111,7 +110,7 @@ It strongly states that a distributed data store can only guarantee two out of t
 
 <img alt="Consistency and availability" src="../assets/images/cap_theorem.png" width="280">
 
-It's worth noting that the FLP impossibility theorem and the CAP theorem are not the same thing[^7],
+It's worth noting that the FLP impossibility theorem and the CAP theorem are not the same thing[^8],
 although they both relate to distributed systems.
 The FLP impossibility theorem deals with the problem of achieving consensus in a distributed system,
 while the CAP theorem deals with the problem of achieving consistency in a distributed database.
@@ -143,11 +142,12 @@ This is why Bitcoin is resilient against network partitioning, but it can also r
 [^3]: [Impossibility of Distributed Consensus with One Faulty Process](https://groups.csail.mit.edu/tds/papers/Lynch/jacm85.pdf)
 [^4]: [Another Advantage of Free Choice: Completely Asynchronous Agreement Protocols](https://homepage.cs.uiowa.edu/~ghosh/BenOr.pdf)
 [^5]: [Consensus in the Presence of Partial Synchrony](https://groups.csail.mit.edu/tds/papers/Lynch/jacm88.pdf)
-[^6]:
+[^6]: [Practical Byzantine Fault Tolerance](https://css.csail.mit.edu/6.824/2014/papers/castro-practicalbft.pdf)
+[^7]:
     **Strong CAP Principle**. Strong Consistency, High Availability, Partition-resilience: Pick at most 2.
     Look at [Harvest, Yield, and Scalable Tolerant Systems](https://s3.amazonaws.com/systemsandpapers/papers/FOX_Brewer_99-Harvest_Yield_and_Scalable_Tolerant_Systems.pdf)
 
-[^7]:
+[^8]:
     There is an interesting topic in
     [Quora](https://www.quora.com/Distributed-Systems/Distributed-Systems-Are-the-FLP-impossibility-result-and-Brewers-CAP-theorem-basically-equivalent)
     about this.
