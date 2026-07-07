@@ -5,6 +5,8 @@ date: 2022-03-17 00:00:00 +0000
 categories: blockchain
 ---
 
+<img alt="Blockchain Security" src="../assets/images/blockchain-security.jpg" width="480">
+
 *Dedicated to my dear friend Thanos.*
 
 Consider a blockchain project with thousands of lines of code as a black box.
