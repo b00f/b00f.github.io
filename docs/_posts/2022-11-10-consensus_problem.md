@@ -134,7 +134,7 @@ This is why Bitcoin is resilient against network partitioning, but it can also r
 
 ---
 
-[^1]: [Chapter on Distributed Computing](https://www.microsoft.com/en-us/research/publication/2016/12/Distributed-Computing.pdf)
+[^1]: [Chapter on Distributed Computing](https://lamport.azurewebsites.net/pubs/lamport-chapter.pdf)
 [^2]:
     FLP stands for Fisher, Lynch, and Paterson, the authors of the paper
     "Impossibility of Distributed Consensus with One Faulty Process."
