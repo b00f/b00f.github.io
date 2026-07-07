@@ -5,6 +5,8 @@ date: 2022-03-17 00:00:00 +0000
 categories: blockchain
 ---
 
+*Dedicated to my dear friend Thanos.*
+
 Consider a blockchain project with thousands of lines of code as a black box.
 There may be critical bugs or issues hidden within it.
 Each of them can act as a potential bomb, and if someone finds and triggers them, they can cause serious damage.
