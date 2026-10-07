@@ -32,4 +32,16 @@ This extra term can be seen as the *interaction effect* — the benefit created 
 
 In this interpretation, the term $2ab$ represents how teamwork can amplify results. When two people work together effectively, their combined output is not merely additive—it can be significantly greater because of synergy.
 
+But mathematics rarely offers only one sign. If $(a + b)^2$ describes what happens when two people reinforce each other, its mirror image describes what happens when they work against each other:
+
+$$
+(a - b)^2 = a^2 + b^2 - 2ab
+$$
+
+Notice what stays the same and what changes. The individual squares, $a^2$ and $b^2$, are still there—each person still brings their own ability and effort. But the interaction term has flipped from $+2ab$ to $-2ab$.
+
+In this reading, $-2ab$ is friction: duplicated effort, misaligned priorities, unclear communication, and the energy spent managing conflict instead of doing the work. Collaboration is not automatically additive. When two people pull in opposite directions, their combined output can be *less* than the sum of their individual parts.
+
+**So the lesson is not simply that teamwork is good. It is that the sign of the interaction is what matters.** Two capable people who align multiply their effect; two equally capable people who pull apart quietly cancel it out. Mathematics does not promise that together is always better. It shows, with painful clarity, that together is always *different*—and the whole difference lives in the cross term.
+
 Sometimes, mathematics does not just describe numbers. It gives us metaphors that help us understand life itself.
